@@ -1,0 +1,6 @@
+---
+date: "2021-10-25T13:09:13-06:00"
+title: Course outline
+---
+
+[Click here]
