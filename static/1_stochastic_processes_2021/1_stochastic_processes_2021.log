@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.24)  26 OCT 2021 05:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.24)  26 OCT 2021 08:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1418,23 +1418,23 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
 
 ] [10
 
+] [11
+
 ]
-Overfull \vbox (29.75536pt too high) detected at line 354
+Overfull \vbox (29.75536pt too high) detected at line 358
  []
 
-[11
-
-] [12
+[12
 
 ] [13
 
+] [14
+
 ]
-Overfull \vbox (10.821pt too high) detected at line 403
+Overfull \vbox (10.821pt too high) detected at line 407
  []
 
-[14
-
-] [15
+[15
 
 ] [16
 
@@ -1442,13 +1442,13 @@ Overfull \vbox (10.821pt too high) detected at line 403
 
 ] [18
 
+] [19
+
 ]
-Overfull \vbox (24.31036pt too high) detected at line 495
+Overfull \vbox (24.31036pt too high) detected at line 499
  []
 
-[19
-
-] [20
+[20
 
 ] [21
 
@@ -1468,12 +1468,12 @@ Overfull \vbox (24.31036pt too high) detected at line 495
 
 ] [29
 
+] [30
+
 ]
 \openout4 = `1_stochastic_processes_2021.vrb'.
 
-(./1_stochastic_processes_2021.vrb) [30
-
-] [31
+(./1_stochastic_processes_2021.vrb) [31
 
 ] [32
 
@@ -1483,13 +1483,13 @@ Overfull \vbox (24.31036pt too high) detected at line 495
 
 ] [35
 
+] [36
+
 ]
-Overfull \vbox (9.37816pt too high) detected at line 752
+Overfull \vbox (9.37816pt too high) detected at line 756
  []
 
-[36
-
-] [37
+[37
 
 ] [38
 
@@ -1497,14 +1497,14 @@ Overfull \vbox (9.37816pt too high) detected at line 752
 
 ] [40
 
+] [41
+
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 826.
+(Font)              <14.4> on input line 830.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 826.
-[41
-
-] [42
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 830.
+[42
 
 ] [43
 
@@ -1514,9 +1514,11 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
 
 ] [46
 
+] [47
+
 ]
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 895; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 899; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1524,26 +1526,24 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 895; it cannot be
 (fontspec)                  The requested feature is "Numbers={Monospaced}". 
 
 
-Overfull \hbox (42.13628pt too wide) in paragraph at lines 895--895
+Overfull \hbox (42.13628pt too wide) in paragraph at lines 899--899
  [] 
  []
 
 
-Overfull \vbox (14.63914pt too high) detected at line 895
+Overfull \vbox (14.63914pt too high) detected at line 899
  []
 
-[47
+[48
 
 ]
 File: roulette.jpeg Graphic file (type bmp)
 <roulette.jpeg>
 
-Overfull \vbox (18.37566pt too high) detected at line 900
+Overfull \vbox (18.37566pt too high) detected at line 904
  []
 
-[48
-
-] [49
+[49
 
 ] [50
 
@@ -1551,9 +1551,11 @@ Overfull \vbox (18.37566pt too high) detected at line 900
 
 ] [52
 
+] [53
+
 ]
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 995; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 999; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1561,7 +1563,7 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 995; it cannot be
 (fontspec)                  The requested feature is "Numbers={Monospaced}". 
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 995; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 999; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1569,14 +1571,14 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 995; it cannot be
 (fontspec)                  The requested feature is "Numbers={Monospaced}". 
 
 
-Overfull \vbox (18.84581pt too high) detected at line 995
+Overfull \vbox (18.84581pt too high) detected at line 999
  []
 
-[53
-
-] [54
+[54
 
 ] [55
+
+] [56
 
 ]
 \tf@nav=\write7
@@ -1594,12 +1596,12 @@ nged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28942 strings out of 478450
- 613072 string characters out of 5855707
- 960947 words of memory out of 5000000
- 48612 multiletter control sequences out of 15000+600000
+ 28944 strings out of 478450
+ 613090 string characters out of 5855707
+ 961003 words of memory out of 5000000
+ 48614 multiletter control sequences out of 15000+600000
  431918 words of font info for 94 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  101i,13n,113p,1830b,683s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 1_stochastic_processes_2021.pdf (55 pages).
+Output written on 1_stochastic_processes_2021.pdf (56 pages).
