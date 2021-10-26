@@ -1,6 +1,6 @@
 baseurl: https://stochasticprocesses.netlify.app/
 languageCode: en-us
-title: A Hugo website
+title: STA 331 2.0 Stochastic Processes
 theme: hugo-lithium
 googleAnalytics: ''
 disqusShortname: ''
