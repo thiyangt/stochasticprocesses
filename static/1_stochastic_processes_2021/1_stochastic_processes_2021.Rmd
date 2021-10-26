@@ -297,7 +297,7 @@ iii) What type of stochastic process is it?
 
 ## Question 3
 
-The number of customers in queue in front of an ATM for at the end of each hour of a day. What type of stochastic process is this?
+The number of customers in a queue in front of an ATM for at the end of each hour of a day. What type of stochastic process is this?
 
 1. discrete-parameter, discrete state space stochastic processes.
 
