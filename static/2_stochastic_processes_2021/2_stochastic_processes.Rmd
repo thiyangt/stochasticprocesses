@@ -1,0 +1,401 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: 2. Markov Chains 
+author: Dr Thiyanga S. Talagala
+date: "November 2, 2021"
+institute: Department of Statistics, University of Sri Jayewardenepura
+output: binb::metropolis
+fontsize: 12pt
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+##  $n$-step transition probabilities - $P^n_{ij}$
+
+$P_{ij}$ - One step transition probabilities
+
+$P^n_{ij}$ - n - step transition probabilities
+
+Probability that a process in state $i$ will be in state $j$ after $n$ additional transitions. That is,
+
+$$P^n_{ij}=P(X_{n+k}=j|X_k=i), \text{ } n\geq 0, \text{ }i, j \geq 0.$$
+
+\vspace{3cm}
+
+## Chapman-Kolmogrov Equations
+
+$$P_{ij}^{n+m}=\sum_{k=0}^{\infty}P_{ik}^nP_{kj}^m\text{ for all n, m} \geq 0, \text{ all i, j,}$$
+where, $P^n_{ik}P^m_{kj}$ represents the probability that starting in $i$ the process will go to state $j$ in $n+m$ with an intermediate stop in state $k$ after $n$ steps.
+
+\textcolor{red}{In-class}
+\vspace{3cm}
+
+This can be used to compute $n$-step transition probabilities
+
+## In-class
+
+## In-class
+
+$P_{ij}^{n+m}=\sum_{k=0}^{\infty}P_{ik}^nP_{kj}^m\text{ for all n, m} \geq 0, \text{ all i, j.}$
+
+Proof:
+
+\vspace{5cm}
+
+## $n$ - step transition matrix
+
+The n-step transition matrix is
+
+$$\mathbf{P}^{(n)} = \left[\begin{array}
+{rrrr}
+P_{00}^{(n)} & P_{01}^{(n)} & P_{02}^{(n)} & ...\\
+P_{10}^{(n)} & P_{11}^{(n)} & P_{12}^{(n)} & ...\\
+. & .  & . & ...\\
+. & .  & . & ...\\
+. & .  & . & ...\\
+\end{array}\right]
+$$
+
+
+## $n$ - step transition matrix (cont.)
+
+The Chapman-Kolmogrov equations imply 
+
+$$\mathbf{P}^{(n+m)}=P^{(n)}P^{(m)}.$$
+  
+In particular, 
+  
+  $$\mathbf{P}^{(2)}=\mathbf{P}^{(1)}\mathbf{P}^{(1)}=\mathbf{P}\mathbf{P}=\mathbf{P}^2.$$
+  By induction, 
+
+$$\mathbf{P}^{(n)}=\mathbf{P}^{(n-1+1)}=\mathbf{P}^{n-1}\mathbf{P}=\mathbf{P}^n.$$
+
+
+## $n$ - step transition matrix
+  
+  **Proposition**
+  
+  $$P^{(n)} = P^n = P \times P \times P \times ... \times P, \text{ } n \geq 1.$$
+    That is, $P^{(n)}$ is equal to $P$ multiplied by itself $n$ times.
+    
+## Example 1
+  
+Let $X_i=0$ if it rains on day $i$; otherwise $X_i=1$. Suppose $P_{00}=0.7$ and $P_{10}=0.4$. Suppose it rains on Monday. Then, what is the probability that it rains on Friday.
+  
+  \vspace{5cm}
+  
+  
+  
+## Example 1 - using R
+  
+```{r, comment=NA, message=FALSE}
+p <- matrix(c(0.7, 0.4, 0.3, 0.6), nrow = 2); p
+p%*%p%*%p%*%p
+```
+  
+So that $P_{00}^{(4)}=0.5749$
+
+## Example 2
+
+Recall the example from class in which the weather today depends on the weather
+for the previous two days.
+
+\vspace{0.5cm}
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{table}[]
+\tiny
+\begin{tabular}{lllll}
+Sate & Yesterday & Today & Tomorrow  & Probability \\
+0-RR& 1 & 1 & 1 & 0.7 \\
+1-SR& 0 & 1 & 1 & 0.5 \\
+2-RS& 1 & 0 & 1 & 0.4 \\
+3-SS& 0 & 0 & 1 & 0.2 
+\end{tabular}
+\end{table}
+\end{column}
+\begin{column}{0.6\textwidth}
+$\mathbf{P}$= $\left[\begin{array}
+{rrrr}
+0.7 & 0 & 0.3 & 0\\
+0.5 & 0 & 0.5 & 0\\
+0 & 0.4  & 0 & 0.6\\
+0 & 0.2  & 0 & 0.8\\
+\end{array}\right]$
+\end{column}
+\end{columns}
+\vspace{0.5cm}
+Now suppose that it was sunny both yesterday and the day before yesterday. What's the probability that it will rain tomorrow?
+
+## Example 2 (cont.)
+
+```{r, comment=NA}
+p <- matrix(c(0.7, 0.5, 0, 0, 0, 0, 0.4, 0.2, 
+              0.3, 0.5, 0, 0, 0, 0, 0.6, 0.8), ncol=4)
+p%*%p
+```
+
+## Unconditional Probabilities
+
+Suppose we know the initial probabilities,
+
+$\alpha_i = P(X_0 = i)$, \text{ }, $i=0, 1, 2, ...$
+
+and $\sum_i\alpha_i=1$.
+
+According to the Law of total probability
+
+
+$$
+\begin{aligned}
+P(X_n=j) & = \sum_{i=0}^{\infty}P(X_n=j \cap X_0=i) \\
+& = \sum_{i=0}^{\infty} P(X_n=j | X_0=i)P(X_0=i) \\
+& = \sum_{i=0}^{\infty}P_{ij}^{(n)}\alpha_i \\
+\end{aligned}
+$$
+
+
+## Example 3 (based on Example 1)
+
+Let $X_i=0$ if it rains on day $i$; otherwise $X_i=1$. Suppose $P_{00}=0.7$ and $P_{01}=0.4$. Suppose it rains on Monday. Suppose $P(X_0=0)=0.4$ and $P(X_0=1)=0.6$. What is the probability that it will not rain on
+the 4th day after we start keeping records?
+
+\vspace{5cm}
+
+
+## Example 3 (cont.)
+
+Let $X_i=0$ if it rains on day $i$; otherwise $X_i=1$. Suppose $P_{00}=0.7$ and $P_{01}=0.4$. Suppose it rains on Monday. Suppose $P(X_0=0)=0.4$ and $P(X_0=1)=0.6$. What is the probability that it will not rain on
+the 4th day after we start keeping records?
+
+```{r, comment=NA, message=FALSE}
+p <- matrix(c(0.7, 0.4, 0.3, 0.6), nrow = 2)
+p%*%p%*%p%*%p
+```
+
+\vspace{5cm}
+
+## Example 4
+
+
+Suppose that a taxi driver operates between Wijerama and Nugegoda. If the driver is in Wijerama the probability that he gets a trip to Nugegoda from one passenger or a group of travelling together is 0.2 and that for him to get a trip nearby Wijerama is 0.8. If the driver is in Nugegoda he has equal chance of getting a trip to Wijerama or nearby Nugegoda. The behaviour of the driver evolves over time in a probabilistic manner.
+
+\textcolor{red}{0 - Wijerama, 1 - Nugegoda}
+
+$\mathbf{P}$= $\left[\begin{array}
+{rr}
+0.8 & 0.2 \\
+0.5 & 0.5 \
+
+\end{array}\right]$
+
+## Example 4 (cont.)
+
+i) If the driver is currently at Wijerama, what is the probability that he will be back at Wijerama after three trips?
+
+\vspace{5cm}
+
+## Example 4 (cont.)
+
+i) If the driver is currently at Wijerama, what is the probability that he will be back at Wijerama after three trips?
+
+```{r, comment=NA}
+p <- matrix(c(0.8, 0.5, 0.2, 0.5), ncol=2)
+p%*%p%*%p
+```
+
+## Example 4 (cont.)
+
+ii) If the driver is at Nugegoda, how many trips on the average will be in Nugegoda before he next goes to Wijerama?
+
+\vspace{5cm}
+
+## Example 4 (cont.): In-class
+
+
+## Example 4 (cont.): In-class
+
+Suppose $P^{(0)} = (0.5, 0.5)$, equal chance for driver be in either Wijerama or Nugegoda. What is the probability he will be in Wijerama after the first trip.
+ 
+> In-class: Method 1
+
+## Probability after n-th step
+
+$$\mathbf{P}^{(n)}=\mathbf{P}^{(0)}\mathbf{P}^{n}$$
+
+\vspace{5cm}
+
+## In-class: Method 2
+
+## Types of States
+
+*Definition*: If $P_{ij}^{(n)}>0$ for some $n \geq 0,$ state $j$ is **accessible** from $i$.
+
+Notation: $i \rightarrow j.$
+
+\vspace{1cm}
+
+*Definition*: If $i \rightarrow j$ and $j \rightarrow i$, then $i$ and $j$ **communicate**.
+
+Notation: $i \leftrightarrow j.$
+
+\vspace{3cm}
+
+
+## Theorem:
+
+Communication is an equivalence relation:
+
+(i) $i \leftrightarrow i$ for all $i$ (reflexive).
+
+(ii) $i \leftrightarrow j$ implies  $j \leftrightarrow i$ (symmetric).
+
+(iii) $i \leftrightarrow j$ and $j \leftrightarrow k$ imply $i \leftrightarrow k$ (transitive).
+
+## In-class: Proof
+
+(i) $i \leftrightarrow i$ for all $i$ (reflexive).
+
+\vspace{10cm}
+
+## In-class: Proof
+
+(ii) $i \leftrightarrow j$ implies  $j \leftrightarrow i$ (symmetric).
+
+\vspace{10cm}
+
+## In-class: Proof
+
+(iii) $i \leftrightarrow j$ and $j \leftrightarrow k$ imply $i \leftrightarrow k$ (transitive).
+
+\vspace{10cm}
+
+
+## In-class: Proof
+
+
+## Note:
+
+- Two states that communicate are said to be in the same **class**.
+
+- The concept of communication divides the state space
+up into a number of separate classes.
+
+In-class: demonstration
+
+\vspace{5cm}
+
+## Theorem (cont.)
+
+
+
+**Definition**: An equivalence class consists of all states that communicate with each other.
+
+Remark: Easy to see that two equivalence classes are disjoint.
+
+Example: The following P has equivalence classes $\{0, 1\}$ and $\{2, 3\}$
+
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrr}
+                        0.5 & 0.5 & 0 & 0 \\
+                        0.5 & 0.5  & 0 & 0\\
+                        0 & 0  & 0.75 & 0.25\\
+                        0 & 0  & 0.25 & 0.75\\
+                        \end{array}\right]$
+
+## Equivalence class (cont.)
+
+What about this?
+
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrr}
+                        0.5 & 0.5 & 0 & 0 \\
+                        0.5 & 0.3  & 0.2 & 0\\
+                        0 & 0  & 0.75 & 0.25\\
+                        0 & 0  & 0.25 & 0.75\\
+                        \end{array}\right]$
+
+## Irreducible
+
+*Definition*: A MC is irreducible if there is only one
+equivalence class (i.e., if all states communicate with each other).
+
+\vspace{1cm}
+
+What about these?
+
+\vspace{1cm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrr}
+                        0.5 & 0.5 & 0 & 0 \\
+                        0.5 & 0.5  & 0 & 0\\
+                        0 & 0  & 0.75 & 0.25\\
+                        0 & 0  & 0.25 & 0.75\\
+                        \end{array}\right]$
+\end{column}
+\begin{column}{0.5\textwidth}
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrr}
+                        0.5 & 0.5 & 0 & 0 \\
+                        0.5 & 0.3  & 0.2 & 0\\
+                        0 & 0  & 0.75 & 0.25\\
+                        0 & 0  & 0.25 & 0.75\\
+                        \end{array}\right]$
+\end{column}
+\end{columns}
+
+## Irreducible (cont.)
+
+What about these?
+
+\vspace{1cm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+$\mathbf{P}$= $\left[\begin{array}
+                        {rr}
+                        0.5 & 0.5 \\
+                        0.25 & 0.75 \\
+                        \end{array}\right]$
+\end{column}
+\begin{column}{0.5\textwidth}
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrr}
+                        0.25 & 0 & 0.75  \\
+                        1 & 0  & 0 \\
+                        0 & 0.5 & 0.5\\
+                        \end{array}\right]$
+\end{column}
+\end{columns}
+
+## Identify the equivalence classes
+
+Consider a Markov chain with a state space $S = \{0, 1, 2, 3, 4\}$ and having the following one-step transition probability matrix.
+
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrrr}
+                        0.4 & 0.2 & 0 & 0.4 & 0  \\
+                          0.2 & 0.4 & 0.1 & 0.3 & 0  \\
+                          0.1 & 0.2 & 0 .5& 0.1 & 0.1  \\
+                            0 & 0 & 0 & 1 & 0  \\
+                              0 & 0 & 0 & 0 & 1  \\
+                        \end{array}\right]$
+
+## Problems ^[Introduction to Probability Models, Sheldon M. Ross]
+
+Example 4.10
+
+Example 4.11
+
+Example 4.12
+
+## Classification of States - next week
+
+Reading Section 4.3: Classification of States^[Introduction to Probability Models, Sheldon M. Ross]

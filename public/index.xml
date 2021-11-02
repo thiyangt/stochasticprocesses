@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>A Hugo website</title>
-    <link>/</link>
-    <description>Recent content on A Hugo website</description>
+    <title>STA 331 2.0 Stochastic Processes</title>
+    <link>https://stochasticprocesses.netlify.app/</link>
+    <description>Recent content on STA 331 2.0 Stochastic Processes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Oct 2021 13:09:13 -0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Oct 2021 21:49:57 -0700</lastBuildDate><atom:link href="https://stochasticprocesses.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>L1-Introduction to Stochastic Processes</title>
+      <link>https://stochasticprocesses.netlify.app/2021/10/26/l1-introduction-to-stochastic-processes/</link>
+      <pubDate>Tue, 26 Oct 2021 21:49:57 -0700</pubDate>
+      
+      <guid>https://stochasticprocesses.netlify.app/2021/10/26/l1-introduction-to-stochastic-processes/</guid>
+      <description>Slides: Lesson 1</description>
+    </item>
+    
     <item>
       <title>Course outline</title>
-      <link>/2021/10/25/course-outline/</link>
-      <pubDate>Mon, 25 Oct 2021 13:09:13 -0600</pubDate>
+      <link>https://stochasticprocesses.netlify.app/2021/10/24/course-outline/</link>
+      <pubDate>Sun, 24 Oct 2021 13:09:13 -0600</pubDate>
       
-      <guid>/2021/10/25/course-outline/</guid>
-      <description>[Click here]</description>
+      <guid>https://stochasticprocesses.netlify.app/2021/10/24/course-outline/</guid>
+      <description>Click here</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>https://stochasticprocesses.netlify.app/about/</link>
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
-      <guid>/about/</guid>
-      <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
+      <guid>https://stochasticprocesses.netlify.app/about/</guid>
+      <description>The word stochastic is jargon for random. Many systems evolve over time with an inherent amount of randomness. A stochastic process is a system which evolves in time or space while undergoing chance fluctuations. We can describe such a system by defining a family of random variables. The objective of this course unit is to introduce the theory of stochastic processes, in particular Markov processes. The theory is illustrated with examples from operations research, biology, finance and economy.</description>
     </item>
     
   </channel>
