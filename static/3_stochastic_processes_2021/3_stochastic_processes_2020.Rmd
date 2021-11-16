@@ -1,0 +1,195 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: 3. Markov Chains - Classification of States
+author: Dr Thiyanga S. Talagala
+date: "September 16, 2021"
+institute: Department of Statistics, University of Sri Jayewardenepura
+output: binb::metropolis
+fontsize: 12pt
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+
+
+## Example 1
+
+Find the equivalence classes.
+
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrr}
+                        \frac{1}{2} & \frac{1}{2} & 0 & 0 \\
+                          \frac{1}{2} &   \frac{1}{2}  & 0 & 0\\
+                          \frac{1}{4} &   \frac{1}{4}  &   \frac{1}{4} &   \frac{1}{4}\\
+                        0 & 0  & 0 & 1\\
+                        \end{array}\right]$
+
+
+<!--The following MC has equiv classes f0; 1g,
+f2g, and f3g, the latter of which is absorbing.-->
+
+## Theorem 
+
+The relation of communication partitions the state space into mutually exclusive and exhaustive classes. (The states in a given class communicate with each other. But states in
+different classes do not communicate with each other.)
+
+\vspace{5cm}
+
+## Definition
+
+Let $f_i$ denote the probability that, starting in state $i$, the process will ever re-enters state $i$, i.e,
+
+$f_i = P(X_n=i \text{ for some } n \geq 1|X_0=i)$
+\vspace{5cm}
+
+## Example 2
+
+Consider the Markov chain consisting of the states 0, 1, 2, 3 with the transition probability matrix,
+
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrr}
+                        \frac{1}{2} & \frac{1}{2} & 0 & 0 \\
+                          \frac{1}{2} &   \frac{1}{2}  & 0 & 0\\
+                          \frac{1}{4} &   \frac{1}{4}  &   \frac{1}{4} &   \frac{1}{4}\\
+                        0 & 0  & 0 & 1\\
+                        \end{array}\right]$
+
+Find $f_0$, $f_1$, $f_2$, $f_3$.
+
+
+
+## Recurrent and transient states
+
+Let $f_i$ be the probability that, starting in state $i$, the process will ever re-enter state
+$i$. State $i$ is said to be recurrent if $f_i = 1$ and transient if $f_i < 1$.
+
+\vspace{5cm}
+
+## Example 3
+
+Consider the Markov chain consisting of the states 0,1,2 with the transition probability matrix
+
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrr}
+                        0 & \frac{1}{2} & \frac{1}{2} \\
+                          \frac{1}{2}  & 0 &  \frac{1}{2}\\
+                          \frac{1}{2} &   \frac{1}{2}  &   0 \\
+                        \end{array}\right]$
+
+Determine which states are transient and which are recurrent.
+
+## Example 4
+
+Consider the Markov chain consisting of the states 0, 1, 2, 3 with the transition probability matrix
+
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrr}
+                        0 & 0 & 0 & 1 \\
+                         0  & 0 & 0 & 1\\
+                          \frac{1}{2} &   \frac{1}{2}  & 0 & 0 \\
+                          0 &   0  & 1 & 0 \\
+                        \end{array}\right]$
+
+Determine which states are transient and which are recurrent.
+
+## Example 5
+
+Consider the Markov chain consisting of the states 0, 1, 2, 3, 4 with the transition probability matrix
+
+$\mathbf{P}$= $\left[\begin{array}
+                        {rrrrr}
+                        \frac{1}{2} & 0 & \frac{1}{2} & 0 & 0\\
+                       \frac{1}{4} & \frac{1}{2} & \frac{1}{4} & 0 & 0\\
+                       \frac{1}{2} & 0 & \frac{1}{2} & 0 & 0\\
+                       0 & 0 & 0 & \frac{1}{2} & \frac{1}{2}\\
+                       0 & 0 & 0 & \frac{1}{2} & \frac{1}{2}\\
+                        \end{array}\right]$
+
+Determine which states are transient and which are recurrent.
+
+
+## Theorem
+
+if state $i$ is recurrent then, starting in state $i$, the process will re-enter state $i$ again and again and again—in
+fact, infinitely often.
+
+
+<!--Page 206-->
+
+<!--B Theorem 2.4-->
+
+
+\vspace{5cm}
+
+
+## Theorem
+
+For any state $i$, let $f_i$ denote the probability that, starting in state $i$, the process will ever re-enter state $i$. If state $i$ is transient then, starting in state $i$, the number of time
+periods that the process will be in state $i$ has a geometric distribution with finite
+mean $\frac{1}{1 - f_i}$.
+
+Proof: In-class
+
+\vspace{3cm}
+
+##
+
+
+## Theorem
+
+State $i$ is
+
+$$\text{ recurrent if } \sum_{n=1}^\infty P_{ii}^n=\infty,$$
+
+$$\text{ transient if } \sum_{n=1}^\infty P_{ii}^n < \infty,$$
+
+Proof: In-class
+\vspace{5cm}
+
+
+
+## Corollary 1
+
+If state $i$ is recurrent, and state $i$ communicates with state $j$ ($i \leftrightarrow j$), then state $j$ is recurrent.
+
+<!--Book - C - 4.2-->
+
+<!--B- Theorem 2.8-->
+
+Proof: In-class
+\vspace{5cm}
+
+## Corollary 2
+
+In a Markov Chain with a finite number of states not all of the states can be transient (There should be at least one recurrent state). 
+
+Proof: In-class
+\vspace{5cm}
+
+## Corollary 3
+
+If one state in an equivalent class is transient, then all other states in that class are also transient.
+
+Proof: In-class
+\vspace{5cm}
+
+## Corollary 4
+
+Not all states in a finite Markov
+chain can be transient. This leads to the conclusion that **all states of a finite irreducible Markov chain are recurrent**.
+
+
+Proof: In-class
+\vspace{5cm}
+
+
+
+
+## Acknowledgement
+
+The contents in the slides are mainly based on Introduction to Probability Models by Sheldon M. Ross.
