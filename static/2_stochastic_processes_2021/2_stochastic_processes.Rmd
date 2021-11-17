@@ -163,7 +163,7 @@ $$
 
 ## Example 3 (based on Example 1)
 
-Let $X_i=0$ if it rains on day $i$; otherwise $X_i=1$. Suppose $P_{00}=0.7$ and $P_{01}=0.4$. Suppose it rains on Monday. Suppose $P(X_0=0)=0.4$ and $P(X_0=1)=0.6$. What is the probability that it will not rain on
+Let $X_i=0$ if it rains on day $i$; otherwise $X_i=1$. Suppose $P_{00}=0.7$ and $P_{10}=0.4$. Suppose it rains on Monday. Suppose $P(X_0=0)=0.4$ and $P(X_0=1)=0.6$. What is the probability that it will not rain on
 the 4th day after we start keeping records?
 
 \vspace{5cm}
