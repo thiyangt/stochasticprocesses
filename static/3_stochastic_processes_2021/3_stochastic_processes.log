@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.24)  16 NOV 2021 09:59
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.24)  17 NOV 2021 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1423,7 +1423,7 @@ Package rerunfilecheck Info: File `3_stochastic_processes.out' has not changed.
 Here is how much of TeX's memory you used:
  28137 strings out of 478450
  598677 string characters out of 5855707
- 945246 words of memory out of 5000000
+ 945244 words of memory out of 5000000
  47847 multiletter control sequences out of 15000+600000
  416019 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

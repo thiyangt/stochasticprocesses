@@ -2,7 +2,7 @@
 title: STA 331 2.0 Stochastic Processes
 subtitle: 3. Markov Chains - Classification of States
 author: Dr Thiyanga S. Talagala
-date: "September 16, 2021"
+date: "November 16, 2021"
 institute: Department of Statistics, University of Sri Jayewardenepura
 output: binb::metropolis
 fontsize: 12pt

@@ -1,6 +1,6 @@
 ---
 date: "2021-11-14T21:49:57-07:00"
-title: L4-5-Limiting Probabilities
+title: "L4-5: Limiting Probabilities"
 ---
 
 
