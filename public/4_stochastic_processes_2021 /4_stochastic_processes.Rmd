@@ -1,0 +1,139 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: 4. Limiting Probabilities
+author: Dr Thiyanga S. Talagala
+date: "January 25, 2022"
+institute: Department of Statistics, University of Sri Jayewardenepura
+output: binb::metropolis
+fontsize: 12pt
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+## Markov chains: A Random Walk
+
+In-class
+
+## Limiting probabilities - Example
+
+Suppose that the chance of rain tomorrow
+depends on previous weather conditions only through whether or not it is
+raining today and not on past weather conditions. Suppose also that if it rains
+today, then it will rain tomorrow with probability 0.7; and if it does not rain today,
+then it will rain tomorrow with probability 0.4.
+If we say that the process is in **state 0 when it rains** and **state 1 when it does not rain**,  
+
+i) Write down the transition probability matrix.
+
+ii) Calculate the probability
+that it will rain four days from today given that it is raining today.
+
+iii) Compute $P^{(8)}$.
+
+## Definition: period-d
+
+State $i$ of a Markov chain is said to have **period**
+$d$ if $P_{ii}^n=0$
+ whenever $n$ is not divisible by $d$, and $d$ is the largest integer with this
+property (largest common divisor is $d$). 
+
+## Definition: aperiodic
+
+A state with period 1 is said to be **aperiodic**.
+
+## Note
+
+Periodicity is a class
+property. That is, if state $i$ has period $d$, and states $i$ and $j$ communicate, then
+state $j$ also has period $d$.
+
+## Definition: positive recurrent
+
+If state $i$ is recurrent, then it is said to be positive recurrent if, starting in state $i$, the expected time until the process returns to state $i$ is finite.
+
+Note:
+
+- Positive recurrence is a class property.
+
+- There exist recurrent states that
+are not positive recurrent. Such states are called **null recurrent**.
+
+## Theorem
+
+In a finite-state Markov chain all recurrent states are positive recurrent
+
+Proof: Omitted
+
+## Definition: ergodic
+
+Positive recurrent, aperiodic states are
+called **ergodic**.
+
+If all states of a Markov chain are ergodic it is called an ergodic Markov chain.
+
+## Fundamental Theorem for Markov Chains
+
+For an irreducible ergodic Markov chain $lim_{n \rightarrow \infty} P_{ij}^n$ exists and is independent of $i$. Furthermore, letting 
+
+$$\pi_j=\lim_{n \to \infty} P_{ij}^n, \text{ } j \geq 0$$
+
+then $\pi_j$ is the unique non-negative solution of 
+
+$$\pi_j = \sum_{i=0}^{\infty}\pi_iP_{ij}, \text{ } j \geq 0,$$
+
+$$\sum_{j=0}^\infty \pi_j = 1.$$
+
+## Cont. (In class)
+
+That is, the solution of system
+
+\vspace{4cm}
+
+$\pi_j$ is also equal to the long run proportion of time that the process spends in state j.
+
+## Limiting probabilities - Example
+
+Suppose that the chance of rain tomorrow
+depends on previous weather conditions only through whether or not it is
+raining today and not on past weather conditions. Suppose also that if it rains
+today, then it will rain tomorrow with probability 0.7; and if it does not rain today,
+then it will rain tomorrow with probability 0.4.
+If we say that the process is in **state 0 when it rains** and **state 1 when it does not rain**,  
+
+i) Write down the transition probability matrix.
+
+ii) Calculate the probability
+that it will rain four days from today given that it is raining today.
+
+iii) Compute $P^{(8)}$.
+
+**iv) Compute limiting probabilities.**
+
+## Example
+
+ A cricket coach can give two types of training, light or heavy, to his sports team before a game,  depending on the results of the prior game. If the team wins the prior game, the next training is equally likely to be light or heavy. But, if the team loses the prior game, the team always needs to undergo a heavy training. The probability that team will win a game after a light training is 0.4. The probability that team will win a game after a heavy training is 0.8.   Calculate the long run proportion of time that the coach will give heavy training to them.
+ 
+## Example
+
+An automobile insurance company classifies its policy holders as low, medium or high risk. Individual transition between classes is modelled as a discrete Markov process with a transition probability matrix as follows
+
+\begin{table}[!h]
+\begin{tabular}{|l|l|l|l|}
+\hline
+ & low & medium & high\\ \hline
+low & 0.9 & 0.05 & 0.05 \\ \hline
+medium & 0.1 & 0.8 & 0.1 \\ \hline
+high &0  & 0.3 & 0.7 \\ \hline
+\end{tabular}
+\end{table}
+
+Calculate the percentage of policy holders in the high risk class in the long run.
+
+## Acknowledgement
+
+The contents in the slides are mainly based on Introduction to Probability Models by Sheldon M. Ross.

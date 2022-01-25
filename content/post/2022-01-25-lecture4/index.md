@@ -1,5 +1,5 @@
 ---
-date: "2022-01-25T21:49:57-07:00"
+date: "2022-01-24T21:49:57-07:00"
 title: "L6: Limiting Probabilities"
 ---
 
