@@ -1,0 +1,36 @@
+---
+title: "Assignment 01"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# STA 331 2.0 Stochastic Processes
+
+## Due date: 01 Feb 2022, 9am
+
+Stochastic processes are widely used as mathematical models of systems and phenomena that appear to vary in a random manner. Find a practical application of a stochastic process and explain the following components of your application.
+
+1. A brief description of your application
+
+2. State space (Discrete or Continuous)
+
+3. Parameter space (Discrete or continuous)
+
+4. Transition probabilities
+
+5. Is it a Markov chain process or not?
+
+6. Assumptions used in modeling the phenomenon as a stochastic process
+
+7. Any other important points
+
+8. You should cite references appropriately according to the APA reference style. 
+
+9. Assignment should be written on .Rmd. You should submit the PDF output file only.
+
+10. Do not include images with copyrights that do not allow reuse.
+
+11. Avoid plagiarism.
