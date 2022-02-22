@@ -1,0 +1,98 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: "6. Poisson process (cont.)"
+author: Dr Thiyanga S. Talagala
+date: ""
+institute: Department of Statistics, University of Sri Jayewardenepura
+output: binb::metropolis
+fontsize: 12pt
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+
+# Interarrival times
+
+## Inter-arrival Time Distribution for a Poisson Process
+
+Consider a Poisson process with rate $\lambda$. Let,
+
+$T_1$ be the time of the first arrival. Let $T_2$ be the time elapsed between the first and the second arrival. Further, for $n > 1$, let $T_n$ denote the elapsed time between the $(n-1)st$ and the $nth$ event. The sequence $\{T_n, n=1, 2, 3, ..\}$ is called the **sequence of interarrival times**.
+
+We shall now determine the distribution of the $T_n$.
+
+## Proposition
+
+Let $N(t)$ be a Poisson process with rate $\lambda$, then  then the interarrival times $T_n$, $n=1, 2, ...$, are independent identically distributed with $Exponential$($\lambda$) distribution.
+
+## The exponential distribution is memoryless
+
+If $X$ is exponential with parameter $\lambda > 0$, then $X$ is a **memoryless random variable**, that is
+$P(X > x+a|X>a)=P(X>x)$, for $a$, $x \geq 0$.
+
+Proof: In-class
+
+\vspace{5cm}
+
+## Example
+
+The number of customers arriving at a railway reservation counter follows a Poisson process with intensity $\lambda=10$ customers per hour.
+Find the probability that there are 2 customers between 11:00 and 11:20.
+Find the probability that there are 3 customers between 11:00 and 11:20 and 7 customers between 11:20 and 12noon.
+
+## Example
+
+Let $N(t)$ be a Poisson process with parameter $\lambda=2$, and let $T_1, T_2, ...$, be the corresponding interarrival times.
+
+i) Find the probability that the first arrival occurs after $t=0.5$.
+
+ii) Given that we have had no arrivals before $t=1$, find P($T_1$ > 3).
+
+iii) Given that the third arrival occurred at time $t=2$, find the probability that the fourth arrival occurs after $t=4$.
+
+iv) Suppose that we start observing the process at time $t=10$. Let $T_1$ be the time of the first arrival after we start observing the process. Find the mean and variance of the random variable $T_1$.
+
+# Arrival times (Waiting time)
+
+## Waiting time distribution
+
+Let $N(t)$ is a Poisson process with rate $\lambda$. We first generate i.i.d. random variables $T_n, n=1, 2, ..$, where $T_n$ ∼ $Exponential(\lambda)$. 
+
+Another quantity of interest is $W_n$, **the arrival time of the $n$th event**, also called **the waiting time until the $n$th event**. Then the arrival times are given by
+
+$W_1 = T_1$
+
+$W_2 = T_1 + T_2$
+
+$W_2 = T_1 + T_2 + T_3$
+
+$...$
+
+## Waiting time distribution (cont.)
+
+Since $T_n$’s are independent and each $T_n$ has an exponential distribution with mean $1/\lambda$, $W_n$
+has a **Gamma distribution** with shape parameter $n$ and rate parameter $\lambda$. The mean waiting
+time is $n/\lambda$.
+
+## Example
+
+Suppose that people arrive at a territory in accordance with a Poisson process of rate $\lambda=10$ per
+day.
+
+i) What is the expected time until the 100th person arrives?
+
+ii) What is the probability that the elapsed time between the 100th and the 200th arrival
+exceeds 10 days?
+
+## Acknowledgement
+
+The contents in the slides are mainly based on 
+
+Introduction to Probability Models by Sheldon M. Ross.
+
+H. Pishro-Nik, "Introduction to probability, statistics, and random processes", Kappa Research LLC, 2014.

@@ -6,7 +6,28 @@
     <description>Recent content in Posts on STA 331 2.0 Stochastic Processes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jan 2022 21:49:57 -0700</lastBuildDate><atom:link href="https://stochasticprocesses.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 21:49:57 -0700</lastBuildDate><atom:link href="https://stochasticprocesses.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>L8-10: Continuous Parameter Markov Chains</title>
+      <link>https://stochasticprocesses.netlify.app/2022/02/20/l8-10-continuous-parameter-markov-chains/</link>
+      <pubDate>Sun, 20 Feb 2022 21:49:57 -0700</pubDate>
+      
+      <guid>https://stochasticprocesses.netlify.app/2022/02/20/l8-10-continuous-parameter-markov-chains/</guid>
+      <description>Slides: Lesson 8
+Slides: Lesson 9-10</description>
+    </item>
+    
+    <item>
+      <title>L7: Ion Switching</title>
+      <link>https://stochasticprocesses.netlify.app/2022/02/14/l7-ion-switching/</link>
+      <pubDate>Mon, 14 Feb 2022 21:49:57 -0700</pubDate>
+      
+      <guid>https://stochasticprocesses.netlify.app/2022/02/14/l7-ion-switching/</guid>
+      <description>Ion Switching Identify the number of channels open at each time point
+Useful materials https://towardsdatascience.com/identifying-the-number-of-open-ion-channels-with-hidden-markov-models-334fab86fc85
+https://www.kaggle.com/janithwanni/as2017567-task</description>
+    </item>
+    
     <item>
       <title>L6: Limiting Probabilities</title>
       <link>https://stochasticprocesses.netlify.app/2022/01/26/l6-limiting-probabilities/</link>
