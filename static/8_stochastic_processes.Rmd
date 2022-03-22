@@ -1,0 +1,671 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: "8. Birth and  Death Processes"
+author: Dr Thiyanga S. Talagala
+date: ""
+institute: Department of Statistics, University of Sri Jayewardenepura
+output: binb::metropolis
+fontsize: 12pt
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+---
+
+## Birth and Death Processes
+
+- The birth-and-death process is a subclass of **continuous-time Markov chains**.
+
+- The birth-and-death processes are characterized by the property that whenever a transition occurs from one state to another, then this transition can be to a neighbouring state only.
+
+
+---
+
+## Transition types
+
+-  a transition occurs from one state to another and this transition can be to a neighbouring state only.
+
+    - Eg: State space $S = \{0, 1, 2, ..., i, ...\}$
+    
+    - transition that occurs from state $i$, can be only to a neighboring state $(i-1)$ or $(i+1)$.
+
+---
+
+## Birth rate and Death rate
+
+#### Birth rate
+
+$\lambda_i$ - birth rate from state $i$, $i \geq 0$
+
+#### Death rate
+
+$\mu_i$ - death rate from state $i$, $i \geq 0$
+
+---
+
+## Queueing systems
+
+1. Birth - equivalent to the arrival of a customer.
+
+
+2. Death - equivalent to the departure of a served customer.
+
+---
+
+## Notations
+
+A continuous-time Markov chain $[X(t), t \in T]$ with state space $S = \{0, 1, 2, ...\}$ with rates
+
+$$q_{i, i+1}=\lambda_i, \text{ } i= 0, 1, ...,$$
+
+$$q_{i, i-1}=\mu_i, \text{ } i= 1, 2, ...,$$
+
+$$q_{i, j}=0, \text{ } j \neq i \pm 1, \text{ } j \neq i, \text{ } i=0, 1, ..., \text{ and}$$
+
+$$q_i = (\lambda_i + \mu_i), \text{ } i=0, 1, ..., \text{ and } \mu_0 = 0.$$
+
+<!--https://www.sciencedirect.com/topics/mathematics/continuous-time-markov-chain-->
+
+
+---
+
+## Pure birth process, pure death process, birth-and-death process
+ 
+ i) a pure birth process if $\mu_i = 0$ for $i=1, 2, ...$
+ 
+    - No decrements, only increments.
+ 
+ ii) a pure death process if $\lambda_i = 0$ for $i=1, 2, ...$
+ 
+        - No increments, only decrements.
+ 
+  
+ iii) a birth-and-death process if some of the  $\lambda_i$'s and some of the $\mu_i$'s are positive.
+ 
+
+---
+
+## Examples of random phenomena modelled through birth and death processes
+
+- Spread of epidemic disease
+
+- Mutant gene dynamics
+
+- Cell kinetics (proliferation of cancer
+cells)
+
+---
+
+## Special cases
+
+
+1. Linear birth process: Yule-Furry process
+
+1. Linear death process
+
+1. Linear birth and death process
+
+
+1.  M/M/I queue
+
+---
+
+## Pure Birth Process 
+
+- Special case of a **continuous-time Markov process** and a **generalisation of a Poisson process**.
+
+- Consider a population of individuals where only the appearances of new individuals, which are called "birth" occur. 
+
+---
+
+
+## General birth processes
+
+Let us consider a birth process whose total number of individuals at time $t$ is denoted by a discrete random variable $N(t)$. As parameter $t$ varies $\{ N(t): t\geq 0\}$ represents a stochastic process with a continuous parameter (time) space and a discrete state space.
+
+Let us assume that the birth rate depends on the present size of the population. Further we assume that the births occur according to the following postulates:
+
+\begin{math}
+\tiny
+ P[N(t+h) = n+k|N(t)=n]=\left\{
+    \begin{array}{ll}
+      \lambda_n h + o(h), & \mbox{k=1}\\
+      o(h), & k \geq 2 \\
+      1-\lambda_n h + o(h), & k = 0 \\
+    \end{array}
+  \right.
+\end{math}
+
+
+
+---
+
+## General birth processes (cont)
+
+**Condition 1**
+
+\begin{math}
+\tiny
+ P[N(t+h) = n+k|N(t)=n]=\left\{
+    \begin{array}{ll}
+      \lambda_n h + o(h), & \mbox{k=1}\\
+      o(h), & k \geq 2 \\
+      1-\lambda_n h + o(h), & k = 0 \\
+    \end{array}
+  \right.
+\end{math}
+
+where $\lambda_n$ is the rate at which the births occur at time $t$ and $n$ being the size of the population at time $t$. 
+
+
+**Condition 2**
+
+$N(0) > 0$
+
+
+---
+
+
+## Your turn
+
+Compare the differences in conditions between Poisson process, Non-homogeneous Poisson Process and Birth Process
+
+---
+
+## Goal: Probability Mass Function of $N(t)$
+
+
+What is the probability that the population size at a given time, t, equals $N(t) = n$?
+
+$$P_n(t) = P[N(t)=n]= ?$$
+For example,
+
+$$P_0(t) = P[N(t)=0]= ?$$
+
+$$P_1(t) = P[N(t)=1]= ?$$
+
+
+$$P_2(t) = P[N(t)=2]= ?$$
+
+
+$$.$$
+
+$$.$$
+and so on..
+
+In general 
+
+$$P_n(t) = P[N(t)=n]= ?$$
+
+
+---
+
+## Linear Birth Process (Yule-Furry Process)
+
+When, $\lambda_n = n \lambda$, i.e. when the birth rate is linear in the present size of the population.
+
+Then the pure birth process is said to a **Linear Birth Process** or **Yule-Furry Process**.
+
+Let is assume that **there is only one individual in the population initially, $N(0) = 1$**. It can be shown that for any $t > 0$.
+
+$$P(N(t)=0)=0$$
+
+$$P(N(t)=n)=e^{-\lambda t}(1-e^{-\lambda t})^{n-1}\text{ }, n \geq 1.$$
+
+---
+
+## Proof (general situation): 
+
+For $n=0$
+
+$P_0(t+h)=P(N(t)=0)P(N(t+h)=0|N(t)=0)$
+
+$P_0(t+h)=P_0(t)(1-\lambda_0 h + o(h))$
+
+i.e.
+
+$P_0(t+h)=P_0(t)-\lambda_0 h P_0(t) + o(h)P_0(t)$
+
+$lim_{h \to 0}\frac{P_0(t+h)-P_0(t)}{h}= -lim_{h \to 0}\lambda_0 P_0(t) + lim_{h \to 0}\frac{o(h)}{h}P_0(t)$
+
+i.e.
+
+$P_0'(t)=-\lambda_0P_0(t).$
+
+We assume that **there is only one individual in the population initially, $N(0) = 1$**. Hence,
+$P[N(t) = 0] = 0$. That is $P_0(t)=0$.
+
+---
+
+## Proof: (cont)
+
+For $n \geq 1$
+
+
+\begin{align*}\label{eq:pareto mle1}
+P_n(t+h) &=   P(N(t)=n)P(N(t+h)=n|N(t)=n) + \\
+&P(N(t)=n-1)P(N(t+h)=n|N(t)=n-1) + \\
+&\sum_{r=2}^{n-1}P(N(t)=n-r)P(N(t+h)=n|N(t)=n-r)
+\end{align*}
+
+
+i.e
+
+\begin{align*}
+P_n(t+h) &= P_n(t) (1-\lambda_n h + o(h))+\\
+&P_{n-1}(t)(\lambda_{n-1} h + o(h))+ \\
+& o(h)
+\end{align*}
+
+
+---
+
+## Proof: (cont)
+
+$P_n(t+h)= P_n(t) -\lambda_n h P_n(t) + \lambda_{n-1}hP_{n-1}(t) + o(h) \text{ for } n\geq 1$
+
+
+$lim_{h \to 0}\frac{P_n(t+h)-P_n(t)}{h}= -\lambda_n P_n(t) + \lambda_{n-1} P_{n-1}(t)+ lim_{h \to 0}\frac{o(h)}{h}$
+
+i.e.
+
+$P'_n(t) = -\lambda_n P_n(t) + \lambda_{n-1}P_{n-1}(t) \text{ for } n\geq 1.$
+
+Therefore the partial differential-difference equations is
+
+For $n \geq 1$,
+$P'_n(t) = -\lambda_n P_n(t) + \lambda_{n-1}P_{n-1}(t).$
+
+---
+
+When $n=1$
+
+$$P_1'(t) = -\lambda_1P_1(t),$$
+$$\int\frac{P_1'(t)}{P_1(t)}dt=-\lambda_1\int dt,$$
+
+$$ln P_1(t) = -\lambda_1t + c$$
+$$P_1(t) = c_1e^{-\lambda_1 t}$$
+When $t=0$, $c_1=1$
+
+$$P_1(t) = e^{-\lambda_1 t}$$
+
+
+---
+
+When $n=2$
+
+$$P_2'(t) = -\lambda_2P_2(t) + \lambda_1P_1(t),$$
+
+
+$$P_2'(t)+\lambda_2P_2(t) = \lambda_1 e^{-\lambda_1 t},$$
+
+Multiply by $e^{\lambda_2t}$
+
+$$P_2'(t) e^{\lambda_2t}+\lambda_2P_2(t) e^{\lambda_2t} = \lambda_1 e^{-\lambda_1 t}e^{\lambda_2t},$$
+
+$$\int \frac{d}{dt}[e^{\lambda_2 t} P_2(t)]dt= \int \lambda_1 e^{(\lambda_2 - \lambda_1)t}dt,$$
+
+$$e^{\lambda_2 t}P_2(t) = \frac{\lambda_1 e^{(\lambda_2 - \lambda_1)t}}{\lambda_2 - \lambda_1} + c$$
+
+
+
+---
+
+When $t=0$, 
+
+We know that $P_2(0) = 0$. hence,
+
+$c=-\frac{\lambda_1}{\lambda_2 - \lambda_1}.$
+
+Hence, 
+
+$$P_2(t) = \frac{\lambda_1}{\lambda_2 - \lambda_1}e^{-\lambda_2t}[e^{(\lambda_2 - \lambda_1)t}-1]$$
+
+---
+
+## Linear birth process (Yule-Furry Process)
+
+When,
+
+$$\lambda_n = n\lambda.$$
+
+That is the birth rate is linear in the present size of the population. 
+
+Let us assume that there is **only one individual in the population** initially. That is $N(0)=1$.
+
+Then the difference-differential equations of the linear birth process takes the form
+
+$P_n'(t) = -n\lambda P_n(t) + (n-1) \lambda P_{n-1}(t)$ for $n \geq 1$ with the initial conditions $P_1(0)=1$ and $P_n(0) = 0$ for $n \geq 2$. 
+
+---
+
+## Linear birth process (Yule-Furry Process) (cont)
+
+
+$P_n'(t) = -n\lambda P_n(t) + (n-1) \lambda P_{n-1}(t)$ for $n \geq 1$ with the initial conditions $P_1(0)=1$ and $P_n(0) = 0$ for $n \geq 2$. 
+
+Multiplying the equation for $n$ by $z^n$ and summing over all $n$ we obtain
+
+$$\frac{\partial}{\partial t}\sum_{n=1}^{\infty}P_n(t)z^n=-\lambda z \frac{\partial}{ \partial z} \sum_{n=1}^{\infty}P_n(t) z^n + \lambda z^2 \frac{\partial}{\partial z} \sum_{n=1}^{\infty}P_{n-1}(t)z^{n-1}$$
+
+Let $\prod(z, t) = \sum_{n=1}^{\infty}P_n(t)z^n$. Then the above equations becomes 
+
+$$\frac{\partial \prod (z, t)}{\partial t}=-\lambda z \frac{\partial \prod (z, t)}{\partial z} + \lambda z^2 \frac{\partial \prod (z, t)}{\partial z}$$
+
+
+---
+
+## Linear birth process (Yule-Furry Process) (cont)
+
+
+i.e. $\frac{\partial \prod (z, t)}{\partial t} = \lambda z (z-1) \frac{\partial \prod (z, t)}{\partial z}$
+
+$\frac{\partial \prod (z, t)}{\partial t} - \lambda z (z-1) \frac{\partial \prod (z, t)}{\partial z} =0$
+
+Subsidiary equations take the form
+
+$$\frac{dt}{1} = \frac{dz}{-\lambda z (z-1)} = \frac{d\prod}{0} $$
+
+Two independent solutions can be obtained one from $d \prod = 0$ and the other from $-\lambda dt = \frac{dz}{z(z-1)}.$
+
+$d \prod =0 \Rightarrow \prod(z, t) = constant.$
+
+$-\lambda dt = \frac{dz}{z(z-1)} \Rightarrow \frac{z}{z-1}e^{-\lambda t} = constant.$
+
+---
+
+## Linear birth process (Yule-Furry Process) (cont)
+
+The general solution can be written as
+
+$\prod (z, t) = f\left(\frac{z}{z-1}e^{-\lambda t}\right)$ where $f$ is an arbitrary function.
+
+The initial conditions $P_1(0) =1$ and $P_n(0)=0$ for $n \geq 2$ imply that $\prod (z, 0) = z.$
+
+$$  \therefore \prod (z, 0) = f \left (\frac{z}{z-1} \right) = z.$$
+
+Let $\omega = \frac{z}{z-1}$ $\Rightarrow$ $z= \frac{\omega}{\omega - 1}$ and hence we obtain $f(\omega) = \frac{\omega}{\omega -1 }$.
+
+---
+
+## Linear birth process (Yule-Furry Process) (cont)
+
+$$ \therefore \prod (z, t) = \frac{\frac{z}{z-1}e^{-\lambda t}}{\frac{z}{z-1}e^{-\lambda t} - 1} = \frac{z e^{-\lambda t}}{z e ^{-\lambda t} - (z-1)}= \left(1-\frac{z-1}{z}e^{-\lambda t} \right)^{-1}$$
+
+Considering coefficients of $z^n$ we have
+
+$$P_n(t) = e^{-\lambda t}{(1-e^{-\lambda t})^{n-1}} \text{ for } n \geq 1.$$
+
+In proving the above results we assume that initially there is only one individual in the population. That is N(0)=1. 
+
+Now let's prove for the case $N(0) = a, a \geq 1.$ For that we use moment generating functions.
+
+
+---
+
+## Moment generating function of $N(t)$
+
+Let 
+
+$$M_{N(t)}(\theta, t) = E[e^{N(t)\theta}],$$
+
+be the moment generating function of $N(t).$ Then, for $t > 0,$
+
+
+\begin{equation} \label{eq1}
+\begin{split}
+M_{N(t)}(\theta, t) & = \sum_{n=0}^\infty e^{n \theta} P(N(t)=n)\\
+ & = \sum_{n=0}^\infty e^{n \theta} P_n(t).
+\end{split}
+\end{equation}
+
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+We assume that $N(0) = a > 0$. Hence, $P_n(t) = 0$  for all $n < a$. Hence,
+
+\begin{equation} \label{eq1}
+\begin{split}
+M_{N(t)}(\theta, t) = \sum_{n=a}^\infty e^{n \theta} P_n(t).
+\end{split}
+\end{equation}
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+Now we take derivative w.r.t $\theta$. Then we get,
+
+$$\frac{\partial}{\partial \theta}M_{N(t)}(\theta, t) = \sum_{n=a}^\infty ne^{n \theta} P_n(t).$$
+
+The derivative w.r.t $t$ is
+
+\begin{equation} \label{eq2}
+\begin{split}
+\frac{\partial}{\partial t}M_{N(t)}(\theta, t) &= \sum_{n=a}^\infty e^{n \theta} P'_n(t) \\
+&= \sum_{n=a}^{\infty}e^{n \theta}[-n \lambda P_n(t) + (n-1) \lambda P_{n-1}(t)] \\
+&= - \sum_{n=a}^{\infty} n e^{n \theta} \lambda P_n(t) + \sum_{n=a}^{\infty}(n-1)e^{n \theta}\lambda P_{n-1}(t)
+\end{split}
+\end{equation}
+
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+
+Since $P_{a-1}(t)=0$, the second summation starts at $a+1$. Hence,
+
+\begin{equation} \label{eq3}
+\begin{split}
+\frac{\partial}{\partial t}M_{N(t)}(\theta, t) &= - \sum_{n=a}^{\infty} n e^{n \theta} \lambda P_n(t) + \sum_{n=a+1}^{\infty}(n-1)e^{n \theta}\lambda P_{n-1}(t) \\
+&= - \sum_{n=a}^{\infty} n e^{n \theta} \lambda P_n(t) + \sum_{m=a}^{\infty}me^{(m+1) \theta}\lambda P_{m}(t) \\
+&= -\lambda \sum_{n=a}^{\infty}n e^{n\theta}P_n(t) + 
+\lambda e^{\theta}\sum_{m=a}^{\infty}m e^{m \theta}P_m(t)\\
+&= -\lambda \frac{\partial}{\partial \theta}M_{N(t)}(\theta, t) + \lambda e^{\theta} \frac{\partial}{\partial \theta}M_{N(t)}(\theta, t)\\
+&= \lambda (e^{\theta} - 1)\frac{\partial}{\partial \theta}M_{N(t)}(\theta, t)
+\end{split}
+\end{equation}
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+\begin{equation} \label{eq4}
+\begin{split}
+\frac{\partial}{\partial t}M_{N(t)}(\theta, t) - \lambda (e^{\theta} - 1)\frac{\partial}{\partial \theta}M_{N(t)}(\theta, t) = 0.
+\end{split}
+\end{equation}
+
+### Note:
+
+A partial differential equation (PDE) for a function $z(x, y)$ is Lagrange type if it takes the form (General form of first-order quasilinear PDE)
+
+
+\begin{equation} \label{eq5}
+\begin{split}
+P(x, y, z)\frac{\partial z}{\partial x} + Q(x, y, z) \frac{\partial z}{\partial y} = R(x, y, z).
+\end{split}
+\end{equation}
+
+
+The associated characteristic system of ordinary differential equations.
+
+---
+
+### Note (cont)
+
+\begin{equation} \label{eq5}
+\frac{dx}{P(x, y, z)} = \frac{dy}{Q(x, y, z)}=\frac{dz}{R(x, y, z)}.
+\end{equation}
+
+
+is known as the characteristic (auxiliary) system of equation (5). Suppose that two independent particular solutions of this system have been found in the form 
+
+$u(x, y, z) = C_1$ and $v(x, y, z) = C_2$, where where $C_1$ and $C_2$ are arbitrary constants. 
+
+Then the general solution to equation (5) can be written as
+
+\begin{equation} \label{eq6}
+\phi(u,v)=0
+\end{equation}
+
+
+where $\phi$ is an arbitrary function of two variables. 
+
+---
+
+### Note (cont.)
+
+With equation (6) solved for $v$, one often specifies the general solution in the form $v=\psi(u)$, where $\psi(u)$ is an arbitrary function of one variable. The $\psi$ can be determined using the boundary conditions.
+
+<!--http://www.scholarpedia.org/article/Partial_differential_equation-->
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+Revisit equation 4,
+
+\begin{equation}
+\begin{split}
+\frac{\partial}{\partial \theta}M_{N(t)}(\theta, t) - \lambda (e^{\theta} - 1)\frac{\partial}{\partial \theta}M_{N(t)}(\theta, t) = 0.
+\end{split}
+\end{equation}
+
+According to the auxiliary system of equation in (6),
+
+$$\frac{dt}{1}=\frac{d\theta}{-\lambda(e^{\theta}-1)}=\frac{M_{N(t)}}{0}$$
+
+$$\frac{dt}{1} = \frac{dM_{N(t)}}{0}$$
+
+$\frac{dM_{N(t)}}{dt}=0$ $\Rightarrow$ $M_{N(t)}(\theta, t) = constant.$
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+Furthermore consider,
+
+$$\frac{dt}{1} = \frac{d\theta}{-\lambda(e^{\theta}-1)}$$
+
+\begin{equation}
+\begin{split}
+\lambda dt &= -\frac{1}{(e^{\theta}-1)} d\theta \\
+&= \frac{-e^{-\theta}}{1-e^{-\theta}}d\theta 
+\end{split}
+\end{equation}
+
+From equation (9) we can write
+
+$$\lambda t = -ln(1-e^{-\theta}) + c$$,
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+Furthermore
+
+$$ln (e^{\lambda t}) + ln(1-e^{-\theta}) = c.$$
+
+Hence,
+
+$$e^{\lambda t}(1-e^{-\theta}) = constant.$$
+
+Hence, the general solution for eq(8) is
+
+$$M_{N(t)}(\theta, t)= \Psi [e^{\lambda t}(1-e^{-\theta})].$$
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+The boundary conditions $P_a(0)=1$, and $P_n(0)$ for $n \neq a$, imply that $M_{N(t)}(\theta, 0) = \sum_{n=a}^{\infty} e^{n \theta}P_n(0)=e^{a\theta}$,
+
+$$M_{N(t)}(\theta, 0)= e^{a \theta} = \Psi(1-e^{-\theta}).$$
+
+Let $\alpha=1-e^{-\theta}$. Then, $e^{\theta}=(1-\alpha)^{-1}.$ Hence,
+$$e^{a\theta} = \Psi(\alpha) = (1-\alpha)^{-a}.$$
+
+
+---
+
+## Moment generating function of $N(t)$ (cont.)
+
+Therefore,
+
+$$M_{N(t)}(\theta, t) = \Psi [e^{\lambda t}(1-e^{-\theta})] = [1-e^{\lambda t}(1-e^{-\theta})]^{-a}.$$
+
+Let $p = e^{-\lambda t}$ and $p+q=1$. Then,
+
+$$M_{N(t)}(\theta, t) =  [1-p^{-1}(1-e^{-\theta})]^{-a} = \left[ \frac{p-1+e^{-\theta}}{p}\right]^{-a} = \left(\frac{p}{e^{-\theta}-q}\right)^a.$$
+
+Now from this MGF, we can derive the moments of $N(t)$.
+
+---
+
+
+## Moment generating function of $N(t)$ (cont.)
+
+It can be shown that
+
+$E(N(t)) = a/p = ae^{\lambda t}$ and
+
+$V[N(t)] = a(1-p)/p^2= a(1-e^{-\lambda t})e^{2\lambda t}.$
+
+Furthermore, we recognize the above MGF is in the form of the MGF of a negative binomial random variable $Y$, with probability mass function
+$P(Y=y) = ^{y-1}C_{a-1}p^{a-1}q^{y-1-(a-1)}p = ^{y-1}C_{a-1}p^aq^{y-a}, \text { }$ for
+$\text{   } y = a, a+1, ...$
+
+Hence, 
+
+$P(N(t)=n) = ^{n-1}C_{a-1}p^{a}q^{n-a} = ^{n-1}C_{a-1}e^{-\lambda t a}(1-e^{-\lambda t})^{n-a}$ for $\text{   } n = a, a+1, ...$
+
+---
+## Moment generating function of $N(t)$ - Alternative approach
+
+Using probability generating functions. Let $G_{N(t)}(s, t)$ is called the probability generating function,
+
+$$G_{N(t)}(s, t) = E(s^{N(t)}) = \sum_{n=0}^{\infty}s^nP_n(t).$$
+
+The coefficients of $s^n$ of the expansion of $G_{N(t)}(s, t)$ will give $P_n(t)$. 
+
+
+
+---
+
+## Linear birth process (Yule-Furry Process)
+
+**Summary:**
+
+### When, $N(0) = 1$
+\vspace{0.5cm}
+
+$P(N(t)=0)=0$
+
+$P(N(t)=n)=e^{-\lambda t}(1-e^{-\lambda t})^{n-1}\text{ }, n \geq 1.$
+
+\vspace{0.5cm}
+### When, $N(0) = a$
+\vspace{0.5cm}
+
+
+$P(N(t)=n) = ^{n-1}C_{a-1}p^{a}q^{n-a} = ^{n-1}C_{a-1}e^{-\lambda t a}(1-e^{-\lambda t})^{n-a}$ for $\text{   } n = a, a+1, ...$
+
+---
+
+## Exercise
+
+Consider a pure birth process on the states $\{0, 1, ..., N\}$ for which $\lambda_k = (N-k) \lambda$ for $k = 0, 1, ..., N$. Suppose $N(0) = 0$. Find $Pn(t) =P(X(t) = n )$ for $n = 0, 1$ and 2.
+
+<!--http://people.missouristate.edu/songfengzheng/Teaching/MTH543/HW6.pdf-->
+
+<!--An Introduction to Stochastic Modeling
+By Mark Pinsky, Samuel Karlin-->

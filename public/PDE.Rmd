@@ -1,0 +1,181 @@
+---
+title: "STA 331 2.0 Stochastic Processes^[Thiyanga S Talagala]"
+subtitle: "Birth-and-Death Processes"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Prerequisite: Partial Differential Equations 
+
+
+A partial differential equation for a function $z(x, y)$ is Lagrange type if it takes the form
+
+\begin{equation} \label{eq1}
+\begin{split}
+P(x, y, z)\frac{\partial z}{\partial x} + Q(x, y, z) \frac{\partial z}{\partial y} = R(x, y, z).
+\end{split}
+\end{equation}
+
+
+This equation contains i) partial differential coefficients, ii) independent variables and iii) dependent variables.
+
+The auxiliary equations are 
+
+
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{dx}{P} = \frac{dy}{Q} = \frac{dz}{R}.
+\end{split}
+\end{equation}
+
+
+Let $u(x, y, z) = C_1$ and $v(x, y, z) = C_2$ are two independent solutions of auxiliary equations. Here, $C_1$ and $C_2$ are constants.
+
+Then the general solution to equation (1) can be written as $f(u, v) = 0$ or $u = \phi(v)$.
+
+## Example 1
+
+Solve the following partial differential equation,
+
+$$y^2p - xyq = x(z-2y),$$ where $p=\frac{\partial z}{\partial x}$ and $q = \frac{\partial z}{\partial y}$.
+
+The auxiliary equations are 
+
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{dx}{y^2}=\frac{dy}{-xy}=\frac{dz}{x(z-2y)}.
+\end{split}
+\end{equation}
+
+
+Consider the first two terms in the equation (3)
+
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{dx}{y} &= \frac{dy}{-x}\\
+\end{split}
+\end{equation}
+
+\begin{equation} \label{eq1}
+\begin{split}
+xdx &= -ydy.
+\end{split}
+\end{equation}
+
+Integrating equation (5) we get
+
+$$\frac{x^2}{2} = -\frac{y^2}{2} + \frac{C_1}{2}.$$
+
+Hence, we have
+
+\begin{equation} \label{eq1}
+\begin{split}
+x^2 + y^2 = C_1.
+\end{split}
+\end{equation}
+
+
+Consider the last two terms in the equation (3)
+
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{-dy}{xy} &= \frac{dz}{x(z-2y)}\\
+\end{split}
+\end{equation}
+
+\begin{equation} \label{eq1}
+\begin{split}
+2ydy &= ydz + zdy.
+\end{split}
+\end{equation}
+
+Integrating equation (7) we get
+
+\begin{equation} \label{eq1}
+\begin{split}
+y^2 - yz = C_2.
+\end{split}
+\end{equation}
+
+From equations (6) and (9) 
+
+$$x^2 + y^2 = f(y^2 - yz).$$
+
+**Answer: ** $x^2 + y^2 = f(y^2 - yz).$
+
+## Example 2 (This is related to the proof of birth process).
+
+Solve the following partial differential equation.
+
+
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{\partial \prod (z, t)}{\partial t}=-\lambda z \frac{\partial \prod (z, t)}{\partial z} + \lambda z^2 \frac{\partial \prod (z, t)}{\partial z}
+\end{split}
+\end{equation}
+
+
+
+where $$\prod(z, t) = \sum_{n=1}^{\infty}P_n(t)z^n.$$
+
+We can simplify the equation (10) and obtain
+
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{\partial \prod (z, t)}{\partial t} = \lambda z (z-1) \frac{\partial \prod (z, t)}{\partial z}
+\end{split}
+\end{equation}
+
+
+
+Auxiliary/Subsidiary equations take the form
+
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{dt}{1} = \frac{dz}{-\lambda z (z-1)} = \frac{d\prod}{0}.
+\end{split}
+\end{equation}
+
+From the first two parts of the equation (12)
+
+\begin{equation} \label{eq1}
+\begin{split}
+-\lambda dt = \frac{dz}{z(z-1)}
+\end{split}
+\end{equation}
+
+From the last two parts of the equation (12)
+
+\begin{equation} \label{eq1}
+\begin{split}
+d \prod = 0.
+\end{split}
+\end{equation}
+
+Integrating equations (13) and (14)
+
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{z}{z-1}e^{-\lambda t} = constant
+\end{split}
+\end{equation}
+
+\begin{equation} \label{eq1}
+\begin{split}
+\prod(z, t) = constant
+\end{split}
+\end{equation}
+
+
+
+
+
+The general solution can be written as,
+
+$$\prod (z, t) = f\left(\frac{z}{z-1}e^{-\lambda t}\right)$$
+
+where $f$ is an arbitrary function.
+

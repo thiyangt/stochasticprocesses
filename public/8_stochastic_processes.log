@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.24)  22 MAR 2022 12:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.24)  22 MAR 2022 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**7_stochastic_processes.tex
-(./7_stochastic_processes.tex
+**8_stochastic_processes.tex
+(./8_stochastic_processes.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-07-12>
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/beamer/bea
@@ -1097,40 +1097,114 @@ File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 ))
 Package hyperref Info: Option `breaklinks' set `true' on input line 55.
 
+(/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/tools/long
+table.sty
+Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
+\LTleft=\skip76
+\LTright=\skip77
+\LTpre=\skip78
+\LTpost=\skip79
+\LTchunksize=\count368
+\LTcapwidth=\dimen305
+\LT@head=\box83
+\LT@firsthead=\box84
+\LT@foot=\box85
+\LT@lastfoot=\box86
+\LT@gbox=\box87
+\LT@cols=\count369
+\LT@rows=\count370
+\c@LT@tables=\count371
+\c@LT@chunks=\count372
+\LT@p@ftn=\toks52
+)
+(/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/booktabs/b
+ooktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen306
+\lightrulewidth=\dimen307
+\cmidrulewidth=\dimen308
+\belowrulesep=\dimen309
+\belowbottomsep=\dimen310
+\aboverulesep=\dimen311
+\abovetopsep=\dimen312
+\cmidrulesep=\dimen313
+\cmidrulekern=\dimen314
+\defaultaddspace=\dimen315
+\@cmidla=\count373
+\@cmidlb=\count374
+\@aboverulesep=\dimen316
+\@belowrulesep=\dimen317
+\@thisruleclass=\count375
+\@lastruleclass=\count376
+\@thisrulewidth=\dimen318
+)
+(/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/caption/ca
+ption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/caption/ca
+ption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen319
+\captionmargin@=\dimen320
+\captionwidth=\dimen321
+\caption@tempdima=\dimen322
+\caption@indent=\dimen323
+\caption@parindent=\dimen324
+\caption@hangindent=\dimen325
+Package caption Info: beamer document class detected.
+
+(/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/caption/ca
+ption-beamer.sto
+File: caption-beamer.sto 2020/08/22 v2.0 Adaption of the caption package to the
+ beamer document classes (AR)
+))
+\c@caption@flags=\count377
+\c@continuedfloat=\count378
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+Package caption Info: longtable package is loaded.
+
+(/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/caption/lt
+caption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+))
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/m
 athrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-) (./7_stochastic_processes.aux)
-\openout1 = `7_stochastic_processes.aux'.
+)
+No file 8_stochastic_processes.aux.
+\openout1 = `8_stochastic_processes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-20.
+26.
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cm
 r.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1165,7 +1239,7 @@ LaTeX Font Info:    ... okay on input line 120.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 120.
+Package hyperref Info: Link coloring OFF on input line 126.
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/hyperref/n
 ameref.sty
@@ -1179,61 +1253,63 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 string/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count368
+\c@section@level=\count379
 )
-LaTeX Info: Redefining \ref on input line 120.
-LaTeX Info: Redefining \pageref on input line 120.
-LaTeX Info: Redefining \nameref on input line 120.
-(./7_stochastic_processes.out) (./7_stochastic_processes.out)
+LaTeX Info: Redefining \ref on input line 126.
+LaTeX Info: Redefining \pageref on input line 126.
+LaTeX Info: Redefining \nameref on input line 126.
 \@outlinefile=\write5
-\openout5 = `7_stochastic_processes.out'.
+\openout5 = `8_stochastic_processes.out'.
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 120.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 126.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 120.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 126.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 120.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 126.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 120.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 126.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmr/m/n on input line 120.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 120.
+(Font)                  OT1/lmss/m/n --> TU/lmr/m/n on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmss/b/n on input line 120.
+(Font)                  OT1/lmr/bx/n --> TU/lmss/b/n on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/lmss/b/n on input line 120.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 120.
+(Font)                  OT1/lmr/bx/n --> TU/lmss/b/n on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 120.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/m/n on input line 120.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 120.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/m/n on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmss/m/it on input line 120.
+(Font)                  OT1/lmr/m/it --> TU/lmss/m/it on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> TU/lmss/m/it on input line 120.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 120.
+(Font)                  OT1/lmr/bx/it --> TU/lmss/m/it on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 120.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 120.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 126.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 120.
+(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 126.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 120.
+(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> TU/lmr/b/n on input line 120.
+(Font)                  OT1/lmss/b/n --> TU/lmr/b/n on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/lmss/b/n --> TU/lmss/b/n on input line 120.
+(Font)                  TU/lmss/b/n --> TU/lmss/b/n on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 120.
+(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 120.
+(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 126.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 120.
+(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 126.
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/translator
 /translator-basic-dictionary-English.dict
@@ -1259,7 +1335,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 /translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \microtypecontext on input line 120.
+LaTeX Info: Redefining \microtypecontext on input line 126.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -1269,8 +1345,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(./7_stochastic_processes.nav)
-Overfull \vbox (16.67491pt too high) detected at line 125
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+No file 8_stochastic_processes.nav.
+
+Overfull \vbox (16.67491pt too high) detected at line 131
  []
 
 [1
@@ -1279,7 +1358,7 @@ Overfull \vbox (16.67491pt too high) detected at line 125
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-166.
+163.
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmss
 .fd
@@ -1290,33 +1369,33 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-66.
+63.
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.
 fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-166.
+163.
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy
 .fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-166.
+163.
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex
 .fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 166.
+(Font)              <10.95> on input line 163.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 166.
+(Font)              <8> on input line 163.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 166.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 166
+(Font)              <6> on input line 163.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 163
 .
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/u
@@ -1327,7 +1406,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 166
+LaTeX Font Info:    Trying to load font information for U+msb on input line 163
 .
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/u
@@ -1339,25 +1418,26 @@ mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
-6.
+3.
 
 (/Users/thiyangashaminitalagala/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/u
 rsfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 166.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 163.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 166.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 163.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 166.
-
-Overfull \vbox (0.76604pt too high) detected at line 166
- []
-
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 163.
 [3
 
-] [4
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 176.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 176.
+[4
 
 ] [5
 
@@ -1371,20 +1451,57 @@ Overfull \vbox (0.76604pt too high) detected at line 166
 
 ] [10
 
-] [11
+]
 
-] [12
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 290.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 290.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 290.
+[11
+
+]
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 313.
+
+[12
 
 ] [13
 
-] [14
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 341.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 341.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 341.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 341.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 341.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 341.
 
-] [15
+Overfull \vbox (175.84546pt too high) detected at line 341
+ []
 
-] [16
+[14
 
 ]
-Overfull \vbox (1.91904pt too high) detected at line 273
+Overfull \vbox (4.94617pt too high) detected at line 358
+ []
+
+[15
+
+]
+Overfull \vbox (17.94617pt too high) detected at line 381
+ []
+
+[16
+
+]
+Overfull \vbox (24.27324pt too high) detected at line 400
  []
 
 [17
@@ -1393,65 +1510,98 @@ Overfull \vbox (1.91904pt too high) detected at line 273
 
 ] [19
 
-] [20
+]
+Overfull \vbox (15.5136pt too high) detected at line 444
+ []
+
+[20
+
+] [21
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 317.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 317.
-[21
+Overfull \vbox (6.44617pt too high) detected at line 475
+ []
 
-] [22
+[22
 
-] [23
+]
+Overfull \vbox (9.74323pt too high) detected at line 492
+ []
+
+[23
 
 ] [24
 
 ] [25
 
-] [26
+]
+Overfull \hbox (20.60175pt too wide) detected at line 542
+\U/msa/m/n/12 ) []\OT1/lmss/m/n/12 ([]\OML/lmm/m/it/12 ; []\OT1/lmss/m/n/12 ) =
+ [] = [] = [][]
+ []
+
+[26
 
 ] [27
 
 ] [28
 
-] [29
+]
+Overfull \vbox (25.14798pt too high) detected at line 587
+ []
+
+[29
 
 ]
-Overfull \vbox (27.29889pt too high) detected at line 420
+Overfull \vbox (30.99571pt too high) detected at line 603
  []
 
 [30
 
-] [31
+]
+Overfull \vbox (22.05487pt too high) detected at line 627
+ []
+
+[31
 
 ] [32
 
 ] [33
 
+] [34
+
 ]
-\tf@nav=\write6
-\openout6 = `7_stochastic_processes.nav'.
+Overfull \vbox (16.46777pt too high) detected at line 699
+ []
 
-\tf@toc=\write7
-\openout7 = `7_stochastic_processes.toc'.
+[35
 
-\tf@snm=\write8
-\openout8 = `7_stochastic_processes.snm'.
+] [36
 
-(./7_stochastic_processes.aux)
-Package rerunfilecheck Info: File `7_stochastic_processes.out' has not changed.
+] [37
 
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
- ) 
+]
+Overfull \hbox (30.63036pt too wide) detected at line 739
+[][]\OT1/lmss/m/n/12 (\OML/lmm/m/it/12 ^^R; []\OT1/lmss/m/n/12 ) = [[] \OMS/lms
+y/m/n/12 ^^@ [][]\OT1/lmss/m/n/12 ([] \OMS/lmsy/m/n/12 ^^@ [][]\OT1/lmss/m/n/12
+ )][] = [][] = [][] \OML/lmm/m/it/12 :
+ []
+
+[38
+
+]
+! Undefined control sequence.
+<argument> @{} >{\raggedright \arraybackslash 
+                                              }p{(\columnwidth - 0\tabcolsep...
+l.771 \end{frame}
+                  
 Here is how much of TeX's memory you used:
- 28259 strings out of 478450
- 601501 string characters out of 5855707
- 943848 words of memory out of 5000000
- 47967 multiletter control sequences out of 15000+600000
- 419966 words of font info for 68 fonts, out of 8000000 for 9000
+ 29722 strings out of 478450
+ 630194 string characters out of 5855707
+ 970489 words of memory out of 5000000
+ 49408 multiletter control sequences out of 15000+600000
+ 435865 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,13n,113p,1825b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,18n,117p,1825b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 7_stochastic_processes.pdf (33 pages).
+Output written on 8_stochastic_processes.pdf (38 pages).
