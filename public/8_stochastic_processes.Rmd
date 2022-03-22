@@ -629,6 +629,7 @@ Hence,
 $P(N(t)=n) = ^{n-1}C_{a-1}p^{a}q^{n-a} = ^{n-1}C_{a-1}e^{-\lambda t a}(1-e^{-\lambda t})^{n-a}$ for $\text{   } n = a, a+1, ...$
 
 ---
+
 ## Moment generating function of $N(t)$ - Alternative approach
 
 Using probability generating functions. Let $G_{N(t)}(s, t)$ is called the probability generating function,
