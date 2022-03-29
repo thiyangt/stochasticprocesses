@@ -1,0 +1,233 @@
+---
+output: pdf_document
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+   - \usepackage{multirow}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Example 1
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+## Examples of birth-and-death process
+
+Example 2:
+
+
+A machine is operational for a time that is exponentially distributed with rate $\alpha$ and
+off or down for a time that is exponentially distributed with rate $\beta$. For example, the machine
+needs a part that has an exponentially distributed lifetime; once it burns out, the fix-it time (time required to obtain a new part) is also exponentially distributed.
+
+\begin{equation} \label{eq3}
+X(t)=\left\{
+    \begin{array}{ll}
+    1, & \text{ if the machine is operational at time t } \\
+      0, & \text{ if the machine is not operational at time t }
+  \end{array}
+  \right.
+\end{equation}
+
+This is a continuous parameter discrete state Markov process There is no absorbing barrier state.
+
+\begin{table}[!h]
+\begin{tabular}{|c|c|c|}
+\hline
+              Instantaneous transition prob.    &   PMF                &  Transition Prob.\\ \hline
+\multirow{2}{*}{} & \multirow{2}{*}{} &  \\
+                &             &  $P_{00}(t)$ \\
+          $P_{01}$        &      $P_1(t)$             &  $P_{01}(t)$\\ \hline
+\multirow{2}{*}{} & \multirow{2}{*}{} &  \\  
+& & $P_{10}(t)$ \\
+           $P_{01}$         &        $P_0(t)$           &  $P_{11}(t)$\\ \hline
+\end{tabular}
+\end{table}
+
+$T_1 \sim exp(\alpha)$ and 
+$T_0 \sim exp(\beta)$.
+
+$T_0$ - time it takes to repair the component.
+
+\newpage
+
+cont...
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+
+## Important facts about the exponential distribution (cont.)
+
+**Fact 2**
+
+ If $T_i \sim exp(\lambda_i)$, where $i = 1, 2, ..., n$. Then $M = min(T_1, T_2, ..., T_n)$ has an exponential distribution with parameter $\sum_{i=1}^{n} \lambda_i$. That is, $M \sim exp(\sum_{i=1}^{n} \lambda_i)$.
+
+**Fact 3**
+
+If $T_i \sim exp(\lambda_i)$, where $i = 1, 2, ..., n$. Then,
+
+$$P[T_j=min(T_1, T_2, ...T_n)] = \frac{\lambda_j}{\sum_{i=1}^{n}\lambda_i}.$$
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+## Examples of birth-and-death process
+
+Example 3 (One server queue)
+
+Suppose that there is **one** checkout counter at a shopping store. Suppose that customers arrive to a single server system according to a Poisson processing having rate $\lambda$ and the service time is exponentially distributed with parameter $\nu$.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+## Examples of birth-and-death process
+
+Example 4 (Two server queue)
+
+Suppose that there are **two** parallel identical checkout counter at a shopping store. The service times are independently and identically distributed. Suppose that customers arrive  according to a Poisson processing having rate $\lambda$ and the service time is exponentially distributed with parameter $\nu$.
+
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+## Examples of birth-and-death process
+
+
+Example 5 
+
+A telephone operator has a phone with a hold button. Suppose incoming voice calls arrive according to a Poisson process  with rate $\lambda$. Each call takes an exponentially distributed time with average $1/\nu$ minutes. If a call arrives during a time the phone is busy, it is placed on hold. If another call arrives, it receives a busy tone and must hang up.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.

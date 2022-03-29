@@ -1,0 +1,85 @@
+---
+output: pdf_document
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+   - \usepackage{multirow}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Examples of birth-and-death process
+
+Example 2:
+
+\begin{table}[!h]
+\begin{tabular}{|c|c|c|}
+\hline
+              Instantaneous transition prob.    &   PMF                &  Transition Prob.\\ \hline
+\multirow{2}{*}{} & \multirow{2}{*}{} &  \\
+                &             &  $P_{00}(t)$ \\
+          $P_{01}$        &      $P_1(t)$             &  $P_{01}(t)$\\ \hline
+\multirow{2}{*}{} & \multirow{2}{*}{} &  \\  
+& & $P_{10}(t)$ \\
+           $P_{01}$         &        $P_0(t)$           &  $P_{11}(t)$\\ \hline
+\end{tabular}
+\end{table}
+
+$T_1 \sim exp(\alpha)$ and 
+$T_0 \sim exp(\beta)$.
+
+$T_0$ - time it takes to repair the component.
+
+\newpage
+
+cont...
+
+\newpage
+
+
+## Examples of birth-and-death process
+
+Example 3 (One server queue)
+
+Suppose that there is **one** checkout counter at a shopping store. Suppose that customers arrive to a single server system according to a Poisson processing having rate $\lambda$ and the service time is exponentially distributed with parameter $\nu$.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+\newpage
+
+## Examples of birth-and-death process
+
+Example 4 (Two server queue)
+
+Suppose that there are **two** parallel identical checkout counter at a shopping store. The service times are independently and identically distributed. Suppose that customers arrive  according to a Poisson processing having rate $\lambda$ and the service time is exponentially distributed with parameter $\nu$.
+
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.
+
+## Examples of birth-and-death process
+
+Example 5 
+
+A telephone operator has a phone with a hold button. Suppose incoming voice calls arrive according to a Poisson process  with rate $\lambda$. Each call takes an exponentially distributed time with average $1/\nu$ minutes. If a call arrives during a time the phone is busy, it is placed on hold. If another call arrives, it receives a busy tone and must hang up.
+
+\newpage
+
+cont.
+
+\newpage
+
+cont.

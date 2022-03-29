@@ -1,0 +1,216 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: "11. Birth-and-Death Process - important results (cont)"
+author: Dr Thiyanga S. Talagala
+date: ""
+institute: Department of Statistics, University of Sri Jayewardenepura
+output: binb::metropolis
+fontsize: 12pt
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+   - \usepackage{multirow}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+
+
+## Definition 
+
+A continuous parameter stationary Markov process 
+is a stochastic process having the properties that
+
+1. Each time it enters state $i$, the amount of time it spends in that state before making a transition into a different state is exponentially distributed (say with rate $\nu_i$ or mean $\frac{1}{\nu_i}$), and
+
+2. When the process leaves state $i$, it enters state $j$ with some probability, $p_{ij}$ satisfying,
+
+\begin{align*}
+\tiny
+P_{ii} &= 0 \text{ all } i\\
+\sum_j P_{ij} &= 1 \text{ all } i \\
+\end{align*}
+
+<!--https://www.slideshare.net/mbfrosh/stat150-spring06-markovcts-->
+
+
+---
+
+## Birth-and-death process
+For birth and death process, let $\lambda_i$ and $\mu_i$ be given by
+
+$\lambda_i = q_{i, i+1}$ and $\mu_i = q_{i, i-1}$.
+
+The values $\{\lambda_i, i\geq 0\}$ and $\{\mu_i, i\geq 0\}$ are called respectively the birth and death rate. Then
+
+$$\nu_i = \lambda_i + \mu_i$$
+
+Then $T_i \sim exp(\lambda_i + \mu_i).$
+
+Furthermore,
+
+$$P_{i, i+1}=\frac{\lambda_i}{\lambda_i + \mu_i}= 1 - P_{i, i-1}$$
+
+
+
+
+---
+
+## Examples of birth-and-death process
+
+Example 1:
+
+Suppose that life-time of a component of a machine is exponentially distributed with rate $\lambda$.
+
+Let $X(t)$ be the state of the machine at time $t$.
+
+\begin{equation} \label{eq3}
+X(t)=\left\{
+    \begin{array}{ll}
+    1, & \text{ if the machine is operational at time t } \\
+      0, & \text{ if the machine is not operational at time t }
+  \end{array}
+  \right.
+\end{equation}
+
+This is a continuous parameter discrete state Markov process with absorbing barrier state 0 (suppose that there are no repairs).
+
+---
+
+## Examples of birth-and-death process
+
+Example 1 (cont.):
+
+**Instantaneous transition probabilities**
+
+$$P_{01} = 0$$ and
+
+$$P_{10}=1$$.
+
+Hence, $P_{11} + P_{10} = 1$.
+
+
+---
+## Examples of birth-and-death process
+
+Example 1 (cont.):
+
+**The probability mass function**
+
+$$P_1(t) = P(X(t)=1)= ?$$
+$$P_0(t) = P(X(t)=0)= ?$$
+
+You know the distribution of $T_1$. Hence,
+
+$$[X(t)=1] \Rightarrow [T_1 \geq t].$$
+
+Therefore,
+
+$$P(X(t)=1) = P(T_1 \geq t) = \int_{t}^{\infty} \lambda e^{-\lambda u}du.$$
+
+---
+## Examples of birth-and-death process
+
+Example 1 (cont.):
+
+Your turn: calculate the associate probabilities for,
+
+$$P_1(t) = P(X(t)=1)= ?$$
+$$P_0(t) = P(X(t)=0)= ?$$
+
+---
+
+## Examples of birth-and-death process
+
+Example 1 (cont.):
+
+
+**second type of transition probability** $P_{ij}(t)$.
+
+$$P_{10}(t) = P(X(t+s)=0|X(s)=1).$$
+
+Write this interms of $T_1$
+
+$$P_{10}(t) = P(T_1 \leq t).$$
+
+$T_1 \sim exp(\lambda)$
+
+You can show that
+$P_{10}(t) = 1-e^{-\lambda t}$ and
+
+$P_{11}(t) = e^{-\lambda t}$.
+
+---
+
+## Examples of birth-and-death process
+
+Example 2:
+
+A machine is operational for a time that is exponentially distributed with rate $\alpha$ and
+off or down for a time that is exponentially distributed with rate $\beta$. For example, the machine
+needs a part that has an exponentially distributed lifetime; once it burns out, the fix-it time (time required to obtain a new part) is also exponentially distributed.
+
+\begin{equation} \label{eq3}
+X(t)=\left\{
+    \begin{array}{ll}
+    1, & \text{ if the machine is operational at time t } \\
+      0, & \text{ if the machine is not operational at time t }
+  \end{array}
+  \right.
+\end{equation}
+
+This is a continuous parameter discrete state Markov process There is no absorbing barrier state.
+
+---
+
+## Examples of birth-and-death process
+
+Example 2:
+
+\begin{table}[]
+\begin{tabular}{|c|c|c|}
+\hline
+              Instantaneous transition prob.    &   PMF                &  Transition Prob.\\ \hline
+\multirow{2}{*}{} & \multirow{2}{*}{} &  \\
+                &             &  $P_{00}(t)$ \\
+          $P_{01}$        &      $P_1(t)$             &  $P_{01}(t)$\\ \hline
+\multirow{2}{*}{} & \multirow{2}{*}{} &  \\  
+& & $P_{10}(t)$ \\
+           $P_{01}$         &        $P_0(t)$           &  $P_{11}(t)$\\ \hline
+\end{tabular}
+\end{table}
+
+$T_1 \sim exp(\alpha)$ and 
+$T_0 \sim exp(\beta)$.
+
+$T_0$ - time it takes to repair the component.
+
+---
+
+## Examples of birth-and-death process
+
+Example 3 (One server queue)
+
+Suppose that there is **one** checkout counter at a shopping store. Suppose that customers arrive to a single server system according to a Poisson processing having rate $\lambda$ and the service time is exponentially distributed with parameter $\nu$.
+
+
+---
+
+## Examples of birth-and-death process
+
+Example 4 (Two server queue)
+
+Suppose that there are **two** parallel identical checkout counter at a shopping store. The service times are independently and identically distributed. Suppose that customers arrive  according to a Poisson processing having rate $\lambda$ and the service time is exponentially distributed with parameter $\nu$.
+
+
+---
+
+
+## Examples of birth-and-death process
+
+Example 5 
+
+A telephone operator has a phone with a hold button. Suppose incoming voice calls arrive according to a Poisson process  with rate $\lambda$. Each call takes an exponentially distributed time with average $1/\nu$ minutes. If a call arrives during a time the phone is busy, it is placed on hold. If another call arrives, it receives a busy tone and must hang up.
+

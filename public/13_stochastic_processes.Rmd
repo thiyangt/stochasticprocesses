@@ -1,0 +1,292 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: "11. Birth-and-Death Process"
+author: Dr Thiyanga S. Talagala
+date: ""
+institute: Department of Statistics, University of Sri Jayewardenepura
+output: binb::metropolis
+fontsize: 12pt
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+
+## Birth-and-death process
+
+Consider the stochastic process with $\{N(t), t\geq 0\}$ with $N(0)=a (\geq 1)$, and
+
+\begin{equation} \label{eq3}
+\tiny
+ P[N(t+h) = n+k|N(t)=n]=\left\{
+    \begin{array}{ll}
+    1-\lambda_n h - \mu_n h+ o(h), & k = 0 \\
+      \lambda_n h + o(h), & \mbox{k=1}\\
+      \mu_n h + o(h), & \mbox{k=-1}\\
+      o(h), & k \geq 2 \text{ or } k \leq -2 
+  \end{array}
+  \right.
+\end{equation}
+
+is called a birth and death process. Note $\mu_0 = 0$
+
+
+
+
+---
+
+## Birth-and-death process 
+
+The partial differential-difference equations are
+
+$P'_{0}(t) = -\lambda_0P_0(t) +\mu_1P_1(t)$ and
+
+$P'_n(t) = -(\mu_n+\lambda_n) P_n(t) + \lambda_{n-1}P_{n-1}(t) + \mu_{n+1}P_{n+1}(t)$ for $n \geq 1.$
+
+---
+
+## Proof
+
+
+Let $P_n(t) = P[N(t)=n]$
+
+Then, for $n \ge 1$,
+
+\begin{align*}\label{eq:pareto mle1}
+P_n(t+h) &=   P(N(t)=n)P(N(t+h)=n|N(t)=n) + \\
+&P(N(t)=n+1)P(N(t+h)=n|N(t)=n+1) + \\
+&P(N(t)=n-1)P(N(t+h)=n|N(t)=n-1) + \\
+&\sum_{r \neq -1, 0, 1}^{\infty}P(N(t)=n-r)P(N(t+h)=n|N(t)=n-r)
+\end{align*}
+
+---
+
+## Proof (cont.)
+
+\begin{align*}
+P_n(t+h) &= P_n(t) (1-\mu_n h - \lambda_n h + o(h))+\\
+&P_{n+1}(t)(\mu_{n+1} h + o(h))+ \\
+&P_{n-1}(t)(\lambda_{n-1} h + o(h))+ \\
+& o(h).
+\end{align*}
+
+\begin{align*}
+P_n(t+h) &=  P_n(t) - \mu_nP_n(t)h - \lambda_nP_n(t)h + \\
+& P_{n+1}(t)\mu_{n+1}h + P_{n-1}(t)\lambda_{n-1}h + \\
+&o(h)\text{ for }  n \geq 1.
+\end{align*}
+
+---
+
+## Proof (cont.)
+
+\begin{align*}
+lim_{h \to 0}\frac{P_n(t+h)-P_n(t)}{h} &=   - \mu_nP_n(t) - \lambda_nP_n(t) + \\
+& P_{n+1}(t)\mu_{n+1} + P_{n-1}(t)\lambda_{n-1} + \\
+&lim_{h \to 0}\frac{o(h)}{h} \text{ for }  n \geq 1.
+\end{align*}
+
+\begin{align*}
+lim_{h \to 0}\frac{P_n(t+h)-P_n(t)}{h} &=   -(\mu_n + \lambda_n)P_n(t) + \\
+& P_{n+1}(t)\mu_{n+1} + P_{n-1}(t)\lambda_{n-1} + \\
+&lim_{h \to 0}\frac{o(h)}{h} \text{ for }  n \geq 1.
+\end{align*}
+
+$P'_n(t) = -(\mu_n+\lambda_n) P_n(t) + \lambda_{n-1}P_{n-1}(t) + \mu_{n+1}P_{n+1}(t)$ for $n \geq 1.$
+
+---
+
+## Proof (cont.)
+
+For $n=0$
+
+\begin{align*}
+P_0(t+h) &=   P(N(t)=0)P(N(t+h)=0|N(t)=0) + \\
+&P(N(t)=1)P(N(t+h)=0|N(t)=1) + \\
+&\sum_{r =  2}^{\infty}P(N(t)=n-r)P(N(t+h)=0|N(t)=n-r)
+\end{align*}
+
+
+\begin{align*}
+P_0(t+h) &=   P_0(t)(1-\mu_0 h - \lambda_0 h + o(h)) + \\
+&P_1(t)(\mu_{1} h + o(h))+ \\
+& o(h)
+\end{align*}
+
+---
+
+## Proof (cont.)
+
+We know that $\mu_0=0$
+
+\begin{align*}
+P_0(t+h) &=   P_0(t)(1 - \lambda_0 h + o(h)) + \\
+&P_1(t)(\mu_{1} h + o(h))+ \\
+& o(h)
+\end{align*}
+
+
+\begin{align*}
+P_0(t+h) &=   P_0(t) - P_0(t) \lambda_0 h + P_0(t) o(h) + \\
+&P_1(t) \mu_{1} h + P_1(t) o(h)+ \\
+& o(h)
+\end{align*}
+
+---
+
+## Proof (cont.)
+
+\begin{align*}
+lim_{h \to 0}\frac{P_0(t+h)-P_0(t)}{h} &=    - \lambda_0P_0(t) +  P_{1}(t)\mu_{1} + \\
+&lim_{h \to 0}\frac{o(h)}{h} \text{ for }  n \geq 1.
+\end{align*}
+
+$$P'_{0}(t) = -\lambda_0P_0(t) +\mu_1P_1(t)$$
+
+---
+
+
+
+## Linear Birth and Death Process
+
+When $\lambda_n = n\lambda$ and $\mu_n = n\mu$, i.e when the birth and death rates are linear in the present size of the population, the birth and death process is said to be a linear birth and death process. Let us assume $N(0) = a (\geq 1)$. 
+
+Birth and death process takes the form
+
+$P'_{0}(t) = \mu P_1(t)$
+
+
+$P'_n(t) = -n(\mu+\lambda) P_n(t) + (n-1)\lambda P_{n-1}(t) + (n+1) \mu P_{n+1}(t)$ for $n \geq 1.$
+
+---
+
+## Q1
+
+We are going to show that
+
+$$E[N(t)] = a e^{\lambda-\mu}t.$$
+
+---
+
+## Q1 (proof)
+
+
+$P'_{0}(t) = \mu P_1(t)$
+
+
+$P'_n(t) = -n(\mu+\lambda) P_n(t) + (n-1)\lambda P_{n-1}(t) + (n+1) \mu P_{n+1}(t)$ for $n \geq 1.$
+
+Using the same method as in pure birth process, we can show that
+
+\begin{equation} \label{eq2}
+\begin{split}
+\frac{\partial}{\partial t}M_{N(t)}(\theta, t)- [\lambda (e^\theta -1) + \mu (e^{-\theta}-1)]\frac{\partial}{\partial \theta}M_{N(t)}(\theta, t) &= 0
+\end{split}
+\end{equation}
+
+---
+
+## Q1 (proof)
+
+The auxiliary system is
+
+$$\frac{dt}{1}=\frac{-d \theta}{[\lambda (e^\theta - 1)+\mu (e^{-\theta} - 1)]}= \frac{dM_{N(t)}}{0},$$
+
+$$\frac{dM_{N(t)}}{0} = 0$$
+
+
+$$\Rightarrow M_{N(t)} (\theta, t) = constant.$$
+
+---
+
+## Q1 (proof):
+
+$$dt=\frac{-d \theta}{[\lambda (e^\theta - 1)+\mu (e^{-\theta} - 1)]}$$
+
+\begin{equation} \label{eq3}
+\tiny
+t=\left\{
+    \begin{array}{ll}
+   -\frac{1}{\lambda - \mu}ln\frac{(e^{-\theta}-1)}{\lambda e^{\theta}-\mu} + constant, & \text{ when }  \lambda \neq \mu \\
+      -\frac{1}{\lambda (e^{\theta}-1)} + constant, & \text{ when } \lambda = \mu
+  \end{array}
+  \right.
+\end{equation}
+
+$\Rightarrow$
+
+$$\frac{(e^{\theta}-1)e^{(\lambda-\mu)t}}{\lambda e^{\theta} -\mu} = constant \text{ when } \lambda \neq \mu$$
+
+
+$$\lambda t - \frac{1}{(e^\theta - 1) } = constant \text{ when } \lambda = \mu. $$
+
+
+---
+
+## Q1 Proof(cont.)
+
+When $\lambda \neq \mu$, the general solution of eq 2 is
+
+\begin{equation} \label{eq3}
+    \begin{array}{ll}
+M_{N(t)}(\theta, t)= \Psi \left( \frac{(e^\theta - 1)e^{(\lambda - \mu)t}}{\lambda e^{\theta}-\mu} \right ).
+  \end{array}
+\end{equation}
+
+
+Initially there are, $a$, individuals $(N(0)=a)$. Hence boundary conditions are $P_a(0)=1$ and $P_n(0)=0$ for $n \neq a$. Hence, 
+$$M_{N(t)}(\theta, 0)= \sum_{n=-\infty}^{\infty}e^{n\theta}P_n(0)=e^{a\theta}.$$ Therefore,
+
+\begin{equation} \label{eq3}
+    \begin{array}{ll}
+M_{N(t)}(\theta, 0) = e^{a \theta}=\Psi[\frac{e^\theta-1}{\lambda e^\theta - \mu}].
+  \end{array}
+\end{equation}
+
+
+
+---
+
+## Q1 (proof)
+
+Let,
+
+$$\alpha =\frac{e^\theta-1}{\lambda e^\theta - \mu}.$$
+
+Then we get
+
+$$e^{\theta} = \frac{\mu \alpha-1}{\lambda \alpha -1}.$$
+
+---
+
+## Q1 (proof)
+
+Substitute to eq 5, we get
+
+\begin{equation} \label{eq3}
+    \begin{array}{ll}
+\Psi(\alpha)=\left( \frac{\mu \alpha-1}{\lambda \alpha - 1} \right)^a.
+  \end{array}
+\end{equation}
+
+
+From eq 4 we have,
+
+$$M_{N(t)}(\theta, t) = \Psi\left( \frac{(e^\theta-1)(e^{(\lambda-\mu)t})}{\lambda e^{\theta} -\mu}\right).$$
+
+
+Let $\nu(\theta, t) = \frac{(e^{\theta}-1)e^{(\lambda - \mu)t}}{\lambda e^\theta - \mu}.$ Therefore,
+
+$$M_{N(t)}(\theta, t) = \left(\frac{\mu \nu(\theta, t)-1}{\lambda \nu(\theta, t)-1}\right)^a.\text{ (similar to eq 6 format)}$$
+
+---
+
+## Q1 (proof): Your turn
+
+Using the MGF, show that
+
+$$E(N(t)) = a e^{(\lambda-\mu)t}.$$

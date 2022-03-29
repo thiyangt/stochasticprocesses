@@ -1,0 +1,199 @@
+---
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Death process - Answers
+
+
+\begin{math}
+\tiny
+ P[N(t+h) = n-k|N(t)=n]=\left\{
+    \begin{array}{ll}
+          1-\mu_n h + o(h), & k = 0 \\
+      \mu_n h + o(h), & \mbox{k=1}\\
+      o(h), & k \geq 2. \\
+    \end{array}
+  \right.
+\end{math}
+
+where $\mu_n$ is the rate at which the births occur at time $t$ and $n$ being the size of the population at time $t$. 
+
+## Question 1
+
+Suppose that a population has an average death rate of $\mu_n$. Let $P_n(t)$ be the probability that there are $n$ individuals in the population at time $t$. Assume that initially, there are $n_0$ number of individuals at time $t=0$. Derive the following system of differential equations for $P_n(t)$.
+
+$P'_{n_0}(t) = -\mu_nP_n(t)$ and
+
+$P'_n(t) = -\mu_n P_n(t) + \mu_{n+1}P_{n+1}(t)$ for $0 \leq n < n_0.$
+
+Note: These system of differential equations can be solved subject to the conditions $P_{n_0}(0)=1$ and $P_n(0)=0$ for $0 \leq n < n_0.$
+
+Hint: You can obtain a system of differential equations similar to the pure birth process. 
+
+## Q1 - Answer
+
+Let us consider a death process whose total number of individuals at time $t$ is denoted by a discrete random variable $N(t)$. Furthermore, $\{N(t): t \geq 0\}$ represents a stochastic process with a continuous parameter space and a discrete state space. Assume that initially, there are $n_0$ number of individuals at time $t=0$.
+
+Let $P_n(t) = P[N(t)=n]$
+
+Then, for $0 \leq n < n_0$,
+
+
+\begin{align*}\label{eq:pareto mle1}
+P_n(t+h) &=   P(N(t)=n)P(N(t+h)=n|N(t)=n) + \\
+&P(N(t)=n+1)P(N(t+h)=n|N(t)=n+1) + \\
+&\sum_{r=2}^{\infty}P(N(t)=n+r)P(N(t+h)=n|N(t)=n+r)
+\end{align*}
+
+i.e
+
+\begin{align*}
+P_n(t+h) &= P_n(t) (1-\mu_n h + o(h))+\\
+&P_{n+1}(t)(\mu_{n+1} h + o(h))+ \\
+& o(h)
+\end{align*}
+
+i.e
+
+$$P_n(t+h) = P_n(t) - \mu_nP_n(t)h + P_{n+1}(t)\mu_{n+1}h + o(h)\text{ for } 0 \leq n < n_0.$$
+
+$$lim_{h \to 0}\frac{P_n(t+h)-P_n(t)}{h}= -\mu_n P_n(t) + \mu_{n+1} P_{n+1}(t)+ lim_{h \to 0}\frac{o(h)}{h}.$$
+
+i.e.
+
+$$P'_n(t) = -\mu_n P_n(t) + \mu_{n+1}P_{n+1}(t) \text{ for } 0 \leq n < n_0.$$
+
+
+For $n = n_0$
+
+
+$$P_{n_o}(t+h) = P[N(t)=n_0]P[N(t+h)=0|N(t)=n_0],$$
+
+$$P_{n_o}(t+h) = P_{n_0}(t) [1-\mu_{n_0}h + o(h)],$$
+
+$$P_{n_o}(t+h) = P_{n_0}(t) -\mu_{n_0}h P_{n_0}(t) + o(h),$$
+
+
+$$lim_{h \to 0}\frac{P_{n_0}(t+h)-P_{n_0}(t)}{h}= -\mu_{n_0} P_{n_0}(t) + lim_{h \to 0}\frac{o(h)}{h}.$$
+
+$$P'_{n_0} = -\mu_{n_0}P_{n_0}(t).$$
+
+## Question 2: Linear Death Process - PMF
+
+When $\mu_n = n\mu$, i.e. when the death rate is linear in the present size of the population, the pure death process is said to be a **linear death process**. Let us assume that there are $n_0$ individuals in the population initially. 
+
+i) When $\mu_n = n\mu$, obtain the system of differential equations of the linear death process.
+
+When $\mu_{n_0} = n_0 \mu$, $$P'_{n_0} = -\mu_{n_0}P_{n_0}(t),$$ becomes
+
+$$P'_{n_0} = -n_0 \mu P_{n_0}(t).$$
+
+
+Furthermore, when $\mu_n = n \mu$, $P'_n(t) = -\mu_n P_n(t) + \mu_{n+1}P_{n+1}(t) \text{ for } 0 \leq n < n_0$ becomes
+
+$$P'_n(t) = -n \mu P_n(t) + (n+1)\mu P_{n+1}(t) \text{ for } 0 \leq n < n_0,$$
+
+with initial conditions $P_{n_0}(0)=1$ and $P_n(0)=0$ for $0 \leq n < n_0$.
+
+## Q2-i: Answer
+
+When $\mu_n = n\mu$, i.e. when the death rate is linear in the present size of the population, the pure death process is said to be a **linear death process**.
+
+
+ii) Based on the system of differential equations show that
+
+
+$$P_n(t) = \frac{n_0!}{(n_0 - n)!n!}(e^{-\mu t})^{n}(1-e^{-\mu t})^{n_0 - n},$$
+
+for $0 \leq n \leq n_0$.
+
+
+## Q2-ii: Answer
+
+$$P'_n(t) = -n \mu P_n(t) + (n+1)\mu P_{n+1}(t) \text{ for } 0 \leq n < n_0,$$
+
+Multiplying the equation for $n$ by $z^n$ and summing over all $n$ we obtain
+
+$$\frac{\partial}{\partial t}\sum_{n=1}^{n_0}P_n(t)z^n=-\mu z \frac{\partial}{ \partial z} \sum_{n=1}^{n_0}P_n(t) z^n + \mu  \frac{\partial}{\partial z} \sum_{n=1}^{n_0 - 1}P_{n+1}(t)z^{n+1}$$
+
+Let $\prod(z, t) = \sum_{n=0}^{n_0}P_n(t)z^n$. Then the above equations becomes 
+
+$$\frac{\partial \prod (z, t)}{\partial t}=-\mu z \frac{\partial \prod (z, t)}{\partial z} + \mu \frac{\partial \prod (z, t)}{\partial z}$$
+i.e.
+
+
+$$\frac{\partial \prod (z, t)}{\partial t} = -\mu  (z-1) \frac{\partial \prod (z, t)}{\partial z}$$
+
+Subsidiary equations take the form
+
+$$\frac{dt}{1} = \frac{dz}{\mu  (z-1)} = \frac{d\prod}{0} $$
+
+Two independent solutions can be obtained one from $d \prod = 0$ and the other from $\mu dt = \frac{dz}{(z-1)}.$
+
+$$d \prod =0 \Rightarrow \prod(z, t) = constant.$$
+
+
+$$-\mu dt = \frac{dz}{(z-1)} \Rightarrow (z-1)e^{-\mu t} = constant.$$
+
+The general solution can be written as
+
+$\prod (z, t) = f\left((z-1)e^{-\mu t}\right)$ where $f$ is an arbitrary function.
+
+The initial conditions $P_{n_0}(0) =1$ and $P_n(0)=0$ for $0 \leq n < n_0$ imply that $\prod (z, 0) = z^i.$
+
+$$  \therefore \prod (z, 0) = f(z-1) = z^{i}.$$
+
+Let $\omega = (z-1)$ $\Rightarrow$ $z= \omega + 1$ and hence we obtain $f(\omega) = (\omega + 1)^i$.
+
+$$  \therefore \prod (z, t) = f(z-1) = z^{i}.$$
+
+
+$$  \therefore \prod (z, t) = \left( (z-1)e^{-\mu t} + 1 \right)^{i}=\{ze^{-\mu t} + (1-e^{-\mu t})\}^{i}.$$
+
+In fact this is the probability generating function of a Binomial distribution with parameter $e^{-\mu t}$ and $i$.
+
+Considering coefficient of $z^n$ we have
+
+$$P_n(t) = \frac{n_0!}{(n_0 - n)!n!}(e^{-\mu t})^{n}(1-e^{-\mu t})^{n_0 - n},$$
+
+
+## Question 3: The mean and variance of the pure death process
+
+Show that the mean of the pure linear death process is 
+
+$E(N(t)) = n_0 e^{-\mu t}$ 
+
+and the variance is 
+
+$V(N(t)) = n_0 e^{-\mu t}(1-e^{-\mu t}).$
+
+## Q3 - Answer
+
+Prove if $X \sim Bin(n, p)$, then $E(X)=np$ and $V(X)=npq$. Here, $p = e^{-\mu t}$ and $q=(1-e^{-\mu t})$.
+
+Hence,
+
+$E(N(t)) = n_0 e^{-\mu t}$ 
+
+and the variance is 
+
+$V(N(t)) = n_0 e^{-\mu t}(1-e^{-\mu t}).$
+
+
+## Question 4: Extinction
+
+In the pure death process the population either remains constant or it decreases. It may eventually reach zero in which case we say that the population has gone **extinct**. Show that the probability the population is extinct at time $t$ is given by
+
+$$P(N(t)=0|N(0)=n_0)= (1-e^{-\mu t})^{n_0}.$$
+
+##  Q4 - Answer
+
+$$P(N(t)=0|N(0)=n_0)= \frac{n_0!}{(n_0 - 0)!n0!} (1-e^{-\mu t})^{n_0}.$$
+
+Hence,
+
+$$P(N(t)=0|N(0)=n_0)= (1-e^{-\mu t})^{n_0}.$$

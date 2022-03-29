@@ -1,0 +1,80 @@
+---
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Distribution of length of stay - Continuous parameter Markov chain processes (cont.)
+
+Now for any $a, h \ge 0$,
+
+\begin{align*}
+\tiny
+P[T_i \geq a+h|T_i \geq a] &= \frac{P[T_i \geq a+h]}{P[T_i \geq a]}\\
+&= \frac{P[N(t)=i, s < t \leq s+a+h|N(s)=i]}{P[N(t) = i, s < t \leq s+a | N(s)=i]}\\
+&= .\\
+&= .\\
+&= P[T_i \geq h] \\
+\end{align*}
+
+Your turn: Complete the intermediate steps.
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+## Definition 2: A continuous parameter stationary Markov process is a stochastic process having the properties that
+
+1. Each time it enters state $i$, the amount of time it spends in that state before making a transition into a different state is exponentially distributed (say with rate $\nu_i$ or mean $\frac{1}{\nu_i}$),
+
+and
+
+2. When the process leaves state $i$, it enters state $j$ with some probability, $p_{ij}$ satisfying,
+
+\begin{align*}
+\tiny
+P_{ii} &= 0 \text{ all } i\\
+\sum_j P_{ij} &= 1 \text{ all } i \\
+\end{align*}
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+\newpage
+
+cont...
+
+
+
