@@ -14,3 +14,9 @@ Slides: [Lesson 14 - i](/13_stochastic_processes.pdf)
 Slides: [Lesson 14 - ii](/12_stochastic_processes.pdf)
 
 Slides: [Lesson 14 - iii](/11_video_demo.pdf)
+
+## Birth-and-Death Process - important results (cont)
+
+Slides: [Lesson 15 - i](/14_stochastic_processes.pdf)
+
+Slides: [Lesson 15 - ii](/15.pdf)
