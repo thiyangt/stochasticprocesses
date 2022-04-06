@@ -93,6 +93,7 @@ Hence, $P_{11} + P_{10} = 1$.
 
 
 ---
+
 ## Examples of birth-and-death process
 
 Example 1 (cont.):
@@ -111,6 +112,7 @@ Therefore,
 $$P(X(t)=1) = P(T_1 \geq t) = \int_{t}^{\infty} \lambda e^{-\lambda u}du.$$
 
 ---
+
 ## Examples of birth-and-death process
 
 Example 1 (cont.):
