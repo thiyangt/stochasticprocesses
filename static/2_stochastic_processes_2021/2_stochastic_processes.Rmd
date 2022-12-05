@@ -2,7 +2,7 @@
 title: STA 331 2.0 Stochastic Processes
 subtitle: 2. Markov Chains 
 author: Dr Thiyanga S. Talagala
-date: "November 2, 2021"
+date: ""
 institute: Department of Statistics, University of Sri Jayewardenepura
 output: binb::metropolis
 fontsize: 12pt
