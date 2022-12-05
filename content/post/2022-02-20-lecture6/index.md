@@ -1,5 +1,5 @@
 ---
-date: "2022-02-20T21:49:57-07:00"
+date: "2022-11-20T21:49:57-07:00"
 title: "L8-10: Continuous Parameter Markov Chains"
 ---
 

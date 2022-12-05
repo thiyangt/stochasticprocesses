@@ -1,5 +1,5 @@
 ---
-date: "2022-03-27T21:49:57-07:00"
+date: "2022-12-01T21:49:57-07:00"
 title: "L14-15: Birth and Death Process (cont)"
 ---
 
