@@ -2,7 +2,7 @@
 title: STA 331 2.0 Stochastic Processes
 subtitle: 4. Limiting Probabilities
 author: Dr Thiyanga S. Talagala
-date: "February 01, 2022"
+date: ""
 institute: Department of Statistics, University of Sri Jayewardenepura
 output: binb::metropolis
 fontsize: 12pt
