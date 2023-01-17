@@ -1,0 +1,82 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: 
+author: Dr Thiyanga S. Talagala
+date: \today
+institute: 
+output: binb::metropolis
+fontsize: 12pt
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+## Random Walk (drunkard's walk)
+
+We start at 0, then at each timestep, we go up by one with probability $p$ and down by one with probability $q=1-p$. When $p=q=\frac{1}{2}$, we are equally likely to go up and down, and we call this the **simple symmetric random walk**. 
+
+**Simple random walk is very useful to model**
+
+- stock prices
+
+- states of populations
+
+- position of gas particles
+
+1. Is this a Markov chain process?
+
+---
+
+2. Draw the state transition diagram.
+
+3. Write the transition probability matrix.
+
+4. If we start in state 0, what is the probability that after two steps a simple random walk has reached $X_2=2$ in two steps?
+
+---
+
+## General Random Walks
+
+An alternative way to write the simple random walk is 
+
+$$X_n = X_0 + \sum_{i=1}^{n}Z_i$$
+
+
+
+where the starting point is $X_0 = 0$ and the **increments** $Z_1, Z_2...$ are independent and identically distributed (IID) random variables with $P(Z_i=1)=p$ and $P(Z_i=-1)=1-p=q$ 
+
+Any stochastic process with the above form for some $X_0$ and some distribution for the IID $Z_i$  is called a **random walk** (without the word "simple").
+
+Find $E(X_n)$ and $Var(X_n)$
+
+---
+
+## Gambler's rule
+
+Ann is gambling against Benika.  Ann is gambling against Benika. Ann starts with USD a and Benika starts with USD b
+Total amount of money they both have is $m=a+b$.   
+At each step of the game, both players bet USD 1; Ann wins USD 1 off Benika with probability $p$, or Benika wins USD 1 off Ann with probability  
+$q$. The game continues until one player is out of money (or is “ruined”).
+
+Let $X_n$ be how much money Ann has after $n$ steps of the game. 
+
+1. What is the state space and parameter space?
+
+2. Is this a Markov chain process?
+
+---
+
+3. What is the probability that the game ends by Ann ruining?
+
+4. How does the game last on average?
+
+---
+
+## Take home task
+
+1. Linear difference equations
+
+2. Homogeneous linear difference equations
+
+3. Inhomogeneous linear difference equations
