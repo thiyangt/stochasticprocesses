@@ -6,7 +6,16 @@
     <description>Recent content in Posts on STA 331 2.0 Stochastic Processes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Dec 2022 21:49:57 -0700</lastBuildDate><atom:link href="https://stochasticprocesses.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jan 2023 21:49:57 -0700</lastBuildDate><atom:link href="https://stochasticprocesses.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Random Walk and Gambler&#39;s ruin problem</title>
+      <link>https://stochasticprocesses.netlify.app/2023/01/01/random-walk-and-gamblers-ruin-problem/</link>
+      <pubDate>Sun, 01 Jan 2023 21:49:57 -0700</pubDate>
+      
+      <guid>https://stochasticprocesses.netlify.app/2023/01/01/random-walk-and-gamblers-ruin-problem/</guid>
+      <description>Slides: slides</description>
+    </item>
+    
     <item>
       <title>L14-15: Birth and Death Process (cont)</title>
       <link>https://stochasticprocesses.netlify.app/2022/12/01/l14-15-birth-and-death-process-cont/</link>
