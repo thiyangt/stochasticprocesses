@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://stochasticprocesses.netlify.app/2023/10/31/2023-october-2024-february/</loc>
+    <lastmod>2023-10-31T13:09:13-06:00</lastmod>
+  </url><url>
+    <loc>https://stochasticprocesses.netlify.app/post/</loc>
+    <lastmod>2023-10-31T13:09:13-06:00</lastmod>
+  </url><url>
+    <loc>https://stochasticprocesses.netlify.app/</loc>
+    <lastmod>2023-10-31T13:09:13-06:00</lastmod>
+  </url><url>
     <loc>https://stochasticprocesses.netlify.app/2023/01/01/past-papers/</loc>
     <lastmod>2023-01-01T21:49:57-07:00</lastmod>
   </url><url>
-    <loc>https://stochasticprocesses.netlify.app/post/</loc>
-    <lastmod>2023-01-01T21:49:57-07:00</lastmod>
-  </url><url>
     <loc>https://stochasticprocesses.netlify.app/2023/01/01/random-walk-and-gamblers-ruin-problem/</loc>
-    <lastmod>2023-01-01T21:49:57-07:00</lastmod>
-  </url><url>
-    <loc>https://stochasticprocesses.netlify.app/</loc>
     <lastmod>2023-01-01T21:49:57-07:00</lastmod>
   </url><url>
     <loc>https://stochasticprocesses.netlify.app/2022/12/01/l14-15-birth-and-death-process-cont/</loc>
