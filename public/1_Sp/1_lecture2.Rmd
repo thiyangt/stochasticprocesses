@@ -221,6 +221,38 @@ Example 4:  Gambler’s Ruin Problem (cont.)
 - Once entered they are never left.
 
 
+## Example 5:
+
+Consider a random walk on the finite states $\{-2 -1, 0, 1, 2\}$. If the process
+is in state $i (i = -1, 0, 1)$ at time $n$, then it moves to either $i -1$ or $i + 1$ at time $n + 1$ with
+equal probability. If the process is in state -2 or 2 at time $n$, then it moves to state -1, 0, or
+1 at time $n + 1$ with equal probability.
+
+Write the transition probability matrix for this process.
+
+## Example 6
+
+Suppose a virus can exist in N different strains enumerated $\{1, . . . , N\}$ and
+in each generation either stays the same, or with probability α mutates to another strain,
+which is chosen at random.
+
+## Random walk
+
+A random walk is a special kind of Markov chain. In a random walk, the states are all
+integers. Negative numbers are (sometimes) allowed. Say you start in a state $a$. The one-step transitions are that, with probability $p$, you move to state $a + 1$ and with probability
+$q = 1 − p$, you move to state $a − 1$. The largest move you can make per transition is one
+step in either direction, and there is no probability of remaining in the same state.
+
+Write the transition probability matrix.
+
+## Random walk with restricted range
+
+State space = $\{a, -2, -1, 0, 1, 2, b\}$
+
+$a$ - absorbing barrier
+
+$b$ - reflecting barrier
+
 ## Estimating transition probabilities
 
 - In the absence of a theoretical model to estimate probabilities, it is necessary to collect data and use them to estimate transition probabilities.
