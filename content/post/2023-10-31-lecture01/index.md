@@ -10,3 +10,5 @@ title: 2023, October - 2024, February
 [Lecture 1-Slides](https://thiyangt.github.io/stochasticprocessesed2/#1)
 
 [Lecture 2-Slides](/1_Sp/1_lecture2.pdf)
+
+[Lecture 3-Slides](/2_stochastic_processes_2021/2_stochastic_processes.pdf)
