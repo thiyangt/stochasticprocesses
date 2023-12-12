@@ -19,11 +19,21 @@ title: 2023, October - 2024, February
 
 [Lecture 3-Slides](/2_stochastic_processes_2021/2_stochastic_processes.pdf)
 
-## 21 Nov 2023
+## 21 Nov 2023/ 28 Nov 2023
 
-[Lecture 4-Slides](/3_stochastic_processes_2021/3_stochastic_processes.pdf)
+[Lecture 4/5-Slides](/3_stochastic_processes_2021/3_stochastic_processes.pdf)
 
 
-## 28 Nov 2023
+## 5 Dec 2023
 
-[Lecture 5-Slides](/4limitingprob/4_stochastic_processes.pdf)
+[Lecture 6-Slides](/4limitingprob/4_stochastic_processes.pdf)
+
+## 12 Dec 2023
+
+[Lecture 7-Slides](https://stochasticprocesses.netlify.app/5_stochastic_processes_2021/5_stochastic_processes_2021.pdf)
+
+
+
+## 21 Dec 2023
+
+Mid Semester Examination and Lecture 8
