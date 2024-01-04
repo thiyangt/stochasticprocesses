@@ -37,3 +37,7 @@ title: 2023, October - 2024, February
 ## 21 Dec 2023
 
 Mid Semester Examination and Lecture 8
+
+## 4 January 2024
+
+[Lecture 9](https://stochasticprocesses.netlify.app/6_stochastic_processes_2021.pdf)
