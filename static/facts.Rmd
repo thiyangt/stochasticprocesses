@@ -1,0 +1,55 @@
+---
+title: STA 331 2.0 Stochastic Processes
+subtitle: "Important results: Exponential distribution"
+author: Dr Thiyanga S. Talagala
+date: ""
+institute: Department of Statistics, University of Sri Jayewardenepura
+output: binb::metropolis
+fontsize: 12pt
+header-includes:
+   - \usepackage{amsfonts}
+   - \usepackage{mathrsfs}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+
+
+---
+
+## Fact 1
+
+ If $T \sim exp(\lambda)$, then $P(T > t+s|T>t) = P(T >s)$. This is called the **memoryless property**, also known as **lack of aging property** or **lack of memory**.
+
+\textcolor{red}{\textbf{Exponential distribution} is the only continuous distribution with the memoryless property.}
+
+\textcolor{blue}{\textbf{Geometric distribution} is the only discrete distribution with the memoryless property.}
+
+<!--https://www.youtube.com/watch?v=3-UFi4T3w7c-->
+
+Proof: In-class
+
+---
+
+## Fact 2
+
+ If $T_i \sim exp(\lambda_i)$, where $i = 1, 2, ..., n$. Then $M = min(T_1, T_2, ..., T_n)$ has an exponential distribution with parameter $\sum_{i=1}^{n} \lambda_i$. That is, $M \sim exp(\sum_{i=1}^{n} \lambda_i)$.
+ 
+Proof: In-class
+---
+
+## Fact 3
+
+If $T_i \sim exp(\lambda_i)$, where $i = 1, 2, ..., n$. Then,
+
+$$P[T_j=min(T_1, T_2, ...T_n)] = \frac{\lambda_j}{\sum_{i=1}^{n}\lambda_i}.$$
+Proof: In-class
+---
+
+## Fact 4
+
+Suppose that $T_i \sim exp(\lambda_i)$. Let $k > 0$ and $T_2 = T_1 - k$. If $T_1 \geq k$, then $P(T_1 > t) = P(T_2 > t)$. 
+
+Proof: In-class
