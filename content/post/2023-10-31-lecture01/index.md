@@ -49,3 +49,10 @@ Mid Semester Examination and Lecture 8
 ## 16 January 2024
 
 [Lecture 11](/facts.pdf)
+
+
+## 23/30 January 2024
+
+[Lecture 12/13](https://stochasticprocesses.netlify.app/14_stochastic_processes.pdf)
+
+
