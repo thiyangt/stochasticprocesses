@@ -55,4 +55,12 @@ Mid Semester Examination and Lecture 8
 
 [Lecture 12/13](https://stochasticprocesses.netlify.app/14_stochastic_processes.pdf)
 
+## Birth and Death Process 
 
+[Note 1](https://stochasticprocesses.netlify.app/8_stochastic_processes.pdf)
+
+[Note 2](https://stochasticprocesses.netlify.app/PDE.pdf)
+
+[Note 3](https://stochasticprocesses.netlify.app/9_stochastic_processes.pdf)
+
+[Note 4: (answers to note 3)](https://stochasticprocesses.netlify.app/10_death_process_answers.pdf)
